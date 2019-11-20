@@ -1,4 +1,4 @@
-module github.com/joseignacioretamalthomsen/wcity
+module github.com/JoseIgnacioRetamalThomsen/wcity
 
 go 1.13
 
