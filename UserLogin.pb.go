@@ -80,8 +80,8 @@ func (m *UserRequest) GetName() string {
 }
 
 type UserResponse struct {
-	IsUser               bool     `protobuf:"varint,1,opt,name=IsUser,proto3" json:"IsUser,omitempty"`
-	Cookie               string   `protobuf:"bytes,2,opt,name=cookie,proto3" json:"cookie,omitempty"`
+	IsUser               bool     `protobuf:"varint,1,opt,name=isUser,proto3" json:"isUser,omitempty"`
+	Token                string   `protobuf:"bytes,2,opt,name=token,proto3" json:"token,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -119,38 +119,129 @@ func (m *UserResponse) GetIsUser() bool {
 	return false
 }
 
-func (m *UserResponse) GetCookie() string {
+func (m *UserResponse) GetToken() string {
 	if m != nil {
-		return m.Cookie
+		return m.Token
 	}
 	return ""
+}
+
+type LogRequest struct {
+	Token                string   `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
+	Email                string   `protobuf:"bytes,2,opt,name=email,proto3" json:"email,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *LogRequest) Reset()         { *m = LogRequest{} }
+func (m *LogRequest) String() string { return proto.CompactTextString(m) }
+func (*LogRequest) ProtoMessage()    {}
+func (*LogRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_62064063b9af919c, []int{2}
+}
+
+func (m *LogRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_LogRequest.Unmarshal(m, b)
+}
+func (m *LogRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_LogRequest.Marshal(b, m, deterministic)
+}
+func (m *LogRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_LogRequest.Merge(m, src)
+}
+func (m *LogRequest) XXX_Size() int {
+	return xxx_messageInfo_LogRequest.Size(m)
+}
+func (m *LogRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_LogRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_LogRequest proto.InternalMessageInfo
+
+func (m *LogRequest) GetToken() string {
+	if m != nil {
+		return m.Token
+	}
+	return ""
+}
+
+func (m *LogRequest) GetEmail() string {
+	if m != nil {
+		return m.Email
+	}
+	return ""
+}
+
+type LogResponse struct {
+	Sucess               bool     `protobuf:"varint,1,opt,name=sucess,proto3" json:"sucess,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *LogResponse) Reset()         { *m = LogResponse{} }
+func (m *LogResponse) String() string { return proto.CompactTextString(m) }
+func (*LogResponse) ProtoMessage()    {}
+func (*LogResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_62064063b9af919c, []int{3}
+}
+
+func (m *LogResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_LogResponse.Unmarshal(m, b)
+}
+func (m *LogResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_LogResponse.Marshal(b, m, deterministic)
+}
+func (m *LogResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_LogResponse.Merge(m, src)
+}
+func (m *LogResponse) XXX_Size() int {
+	return xxx_messageInfo_LogResponse.Size(m)
+}
+func (m *LogResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_LogResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_LogResponse proto.InternalMessageInfo
+
+func (m *LogResponse) GetSucess() bool {
+	if m != nil {
+		return m.Sucess
+	}
+	return false
 }
 
 func init() {
 	proto.RegisterType((*UserRequest)(nil), "wcity.UserRequest")
 	proto.RegisterType((*UserResponse)(nil), "wcity.UserResponse")
+	proto.RegisterType((*LogRequest)(nil), "wcity.LogRequest")
+	proto.RegisterType((*LogResponse)(nil), "wcity.LogResponse")
 }
 
 func init() { proto.RegisterFile("UserLogin.proto", fileDescriptor_62064063b9af919c) }
 
 var fileDescriptor_62064063b9af919c = []byte{
-	// 243 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x8c, 0x90, 0x3f, 0x4b, 0x03, 0x41,
-	0x10, 0xc5, 0xb9, 0xc4, 0x1c, 0x66, 0x0c, 0x0a, 0x13, 0x91, 0xc3, 0x4a, 0xae, 0xb2, 0xf1, 0xc0,
-	0x3f, 0xb5, 0x60, 0xae, 0x12, 0x2c, 0x8e, 0x03, 0x2b, 0xab, 0x75, 0x1d, 0x72, 0x4b, 0x92, 0x9d,
-	0x73, 0x67, 0x43, 0xb0, 0xf0, 0xcb, 0xf8, 0x49, 0x65, 0x37, 0x8b, 0x78, 0x5d, 0xba, 0x7d, 0xef,
-	0xc7, 0xbc, 0xe5, 0x3d, 0x38, 0x7b, 0x15, 0x72, 0x2f, 0xbc, 0x34, 0xb6, 0xea, 0x1d, 0x7b, 0xc6,
-	0xc9, 0x4e, 0x1b, 0xff, 0x55, 0xbe, 0xc1, 0x49, 0x20, 0x2d, 0x7d, 0x6e, 0x49, 0x3c, 0x9e, 0xc3,
-	0x84, 0x36, 0xca, 0xac, 0x8b, 0xec, 0x2a, 0xbb, 0x9e, 0xb6, 0x7b, 0x81, 0x25, 0xcc, 0x3a, 0x25,
-	0x5d, 0xa3, 0x44, 0x76, 0xec, 0x3e, 0x8a, 0x51, 0x84, 0x03, 0x0f, 0x11, 0x8e, 0xac, 0xda, 0x50,
-	0x31, 0x8e, 0x2c, 0xbe, 0xcb, 0x47, 0x98, 0xed, 0xc3, 0xa5, 0x67, 0x2b, 0x84, 0x17, 0x90, 0x3f,
-	0x4b, 0x70, 0x62, 0xfc, 0x71, 0x9b, 0x54, 0xf0, 0x35, 0xf3, 0xca, 0x50, 0x4a, 0x4e, 0xea, 0xee,
-	0x1b, 0x30, 0xf0, 0xa7, 0xad, 0xef, 0xc8, 0x7a, 0xa3, 0x95, 0x37, 0x6c, 0xf1, 0x01, 0xa6, 0x75,
-	0x47, 0x7a, 0x15, 0x4f, 0xb1, 0x8a, 0x3d, 0xaa, 0x7f, 0x25, 0x2e, 0xe7, 0x03, 0x2f, 0xfd, 0x7d,
-	0x0b, 0x79, 0xed, 0x48, 0x79, 0x3a, 0xf8, 0x64, 0x71, 0x03, 0x73, 0xc3, 0xd5, 0xd2, 0xf5, 0x3a,
-	0xd1, 0x75, 0xd8, 0x6f, 0x71, 0xfa, 0x37, 0x65, 0x13, 0x96, 0x6c, 0xb2, 0x9f, 0xd1, 0xb8, 0x6d,
-	0xea, 0xf7, 0x3c, 0x0e, 0x7b, 0xff, 0x1b, 0x00, 0x00, 0xff, 0xff, 0xf0, 0xa7, 0x3a, 0xe1, 0x6b,
-	0x01, 0x00, 0x00,
+	// 304 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0x94, 0x52, 0x41, 0x4b, 0xf3, 0x40,
+	0x10, 0x25, 0xe9, 0xd7, 0xf0, 0x75, 0x5a, 0x14, 0xb7, 0x22, 0xa1, 0x27, 0x09, 0x08, 0x5e, 0x8c,
+	0x60, 0x15, 0x3c, 0x78, 0xb1, 0xbd, 0x7a, 0x08, 0x41, 0x4f, 0x9e, 0xd6, 0x38, 0x34, 0x4b, 0xdb,
+	0xdd, 0x98, 0xd9, 0x50, 0xfc, 0x3b, 0xfe, 0x39, 0xff, 0x86, 0xd9, 0xcd, 0x6a, 0xb6, 0x37, 0xbd,
+	0xed, 0x9b, 0xb7, 0x6f, 0xde, 0x9b, 0x61, 0xe0, 0xf0, 0x89, 0xb0, 0x7e, 0x50, 0x2b, 0x21, 0xd3,
+	0xaa, 0x56, 0x5a, 0xb1, 0xe1, 0xae, 0x10, 0xfa, 0x3d, 0x79, 0x86, 0xb1, 0x61, 0x72, 0x7c, 0x6b,
+	0x90, 0x34, 0x3b, 0x86, 0x21, 0x6e, 0xb9, 0xd8, 0xc4, 0xc1, 0x69, 0x70, 0x3e, 0xca, 0x3b, 0xc0,
+	0x12, 0x98, 0x94, 0x9c, 0xca, 0x8c, 0x13, 0xed, 0x54, 0xfd, 0x1a, 0x87, 0x96, 0xdc, 0xab, 0x31,
+	0x06, 0xff, 0x24, 0xdf, 0x62, 0x3c, 0xb0, 0x9c, 0x7d, 0x27, 0x77, 0x30, 0xe9, 0x9a, 0x53, 0xa5,
+	0x24, 0x21, 0x3b, 0x81, 0x48, 0x90, 0xa9, 0xd8, 0xf6, 0xff, 0x73, 0x87, 0x8c, 0xab, 0x56, 0x6b,
+	0x94, 0xae, 0x71, 0x07, 0x92, 0x5b, 0x80, 0x36, 0xb0, 0x97, 0xac, 0xfb, 0x13, 0x78, 0x7f, 0xfa,
+	0xbc, 0xa1, 0x97, 0x37, 0x39, 0x83, 0xb1, 0x55, 0xf6, 0xb6, 0xd4, 0x14, 0x48, 0xf4, 0x6d, 0xdb,
+	0xa1, 0xab, 0xcf, 0x00, 0x98, 0xf1, 0xbf, 0x6f, 0x74, 0x89, 0x52, 0x8b, 0x82, 0x6b, 0xa1, 0x24,
+	0xbb, 0x86, 0x91, 0x5d, 0x94, 0x8d, 0xc6, 0x52, 0xbb, 0xa7, 0xd4, 0x5b, 0xd2, 0x6c, 0xba, 0x57,
+	0x73, 0x26, 0x37, 0x00, 0xcb, 0x1a, 0xb9, 0xc6, 0xbf, 0xc9, 0xe6, 0xad, 0xac, 0xc4, 0x62, 0xfd,
+	0x68, 0xc7, 0x39, 0x72, 0x5f, 0xfa, 0xb9, 0x67, 0xcc, 0x2f, 0x39, 0xd1, 0x25, 0x44, 0x2d, 0x54,
+	0x8d, 0xfe, 0xa5, 0x60, 0x71, 0x01, 0x53, 0xa1, 0xd2, 0x55, 0x5d, 0x15, 0x8e, 0xdc, 0x98, 0x01,
+	0x17, 0x07, 0x3f, 0x47, 0x91, 0x99, 0x9b, 0xc8, 0x82, 0x8f, 0x70, 0x90, 0x67, 0xcb, 0x97, 0xc8,
+	0x9e, 0xc8, 0xfc, 0x2b, 0x00, 0x00, 0xff, 0xff, 0x7e, 0x4b, 0xf3, 0xc5, 0x35, 0x02, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -165,8 +256,14 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type UserAuthenticationClient interface {
-	CheckUser(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*UserResponse, error)
-	Create(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*UserResponse, error)
+	// used for login
+	LoginUser(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*UserResponse, error)
+	// created user and return login token
+	CreateUser(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*UserResponse, error)
+	// check if user is logged
+	CheckToken(ctx context.Context, in *LogRequest, opts ...grpc.CallOption) (*LogResponse, error)
+	// for logout
+	Logout(ctx context.Context, in *LogRequest, opts ...grpc.CallOption) (*LogResponse, error)
 }
 
 type userAuthenticationClient struct {
@@ -177,18 +274,36 @@ func NewUserAuthenticationClient(cc *grpc.ClientConn) UserAuthenticationClient {
 	return &userAuthenticationClient{cc}
 }
 
-func (c *userAuthenticationClient) CheckUser(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*UserResponse, error) {
+func (c *userAuthenticationClient) LoginUser(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*UserResponse, error) {
 	out := new(UserResponse)
-	err := c.cc.Invoke(ctx, "/wcity.UserAuthentication/CheckUser", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/wcity.UserAuthentication/LoginUser", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userAuthenticationClient) Create(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*UserResponse, error) {
+func (c *userAuthenticationClient) CreateUser(ctx context.Context, in *UserRequest, opts ...grpc.CallOption) (*UserResponse, error) {
 	out := new(UserResponse)
-	err := c.cc.Invoke(ctx, "/wcity.UserAuthentication/Create", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/wcity.UserAuthentication/CreateUser", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userAuthenticationClient) CheckToken(ctx context.Context, in *LogRequest, opts ...grpc.CallOption) (*LogResponse, error) {
+	out := new(LogResponse)
+	err := c.cc.Invoke(ctx, "/wcity.UserAuthentication/CheckToken", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userAuthenticationClient) Logout(ctx context.Context, in *LogRequest, opts ...grpc.CallOption) (*LogResponse, error) {
+	out := new(LogResponse)
+	err := c.cc.Invoke(ctx, "/wcity.UserAuthentication/Logout", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -197,57 +312,105 @@ func (c *userAuthenticationClient) Create(ctx context.Context, in *UserRequest, 
 
 // UserAuthenticationServer is the server API for UserAuthentication service.
 type UserAuthenticationServer interface {
-	CheckUser(context.Context, *UserRequest) (*UserResponse, error)
-	Create(context.Context, *UserRequest) (*UserResponse, error)
+	// used for login
+	LoginUser(context.Context, *UserRequest) (*UserResponse, error)
+	// created user and return login token
+	CreateUser(context.Context, *UserRequest) (*UserResponse, error)
+	// check if user is logged
+	CheckToken(context.Context, *LogRequest) (*LogResponse, error)
+	// for logout
+	Logout(context.Context, *LogRequest) (*LogResponse, error)
 }
 
 // UnimplementedUserAuthenticationServer can be embedded to have forward compatible implementations.
 type UnimplementedUserAuthenticationServer struct {
 }
 
-func (*UnimplementedUserAuthenticationServer) CheckUser(ctx context.Context, req *UserRequest) (*UserResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CheckUser not implemented")
+func (*UnimplementedUserAuthenticationServer) LoginUser(ctx context.Context, req *UserRequest) (*UserResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method LoginUser not implemented")
 }
-func (*UnimplementedUserAuthenticationServer) Create(ctx context.Context, req *UserRequest) (*UserResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Create not implemented")
+func (*UnimplementedUserAuthenticationServer) CreateUser(ctx context.Context, req *UserRequest) (*UserResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateUser not implemented")
+}
+func (*UnimplementedUserAuthenticationServer) CheckToken(ctx context.Context, req *LogRequest) (*LogResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CheckToken not implemented")
+}
+func (*UnimplementedUserAuthenticationServer) Logout(ctx context.Context, req *LogRequest) (*LogResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Logout not implemented")
 }
 
 func RegisterUserAuthenticationServer(s *grpc.Server, srv UserAuthenticationServer) {
 	s.RegisterService(&_UserAuthentication_serviceDesc, srv)
 }
 
-func _UserAuthentication_CheckUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UserAuthentication_LoginUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UserRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserAuthenticationServer).CheckUser(ctx, in)
+		return srv.(UserAuthenticationServer).LoginUser(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/wcity.UserAuthentication/CheckUser",
+		FullMethod: "/wcity.UserAuthentication/LoginUser",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserAuthenticationServer).CheckUser(ctx, req.(*UserRequest))
+		return srv.(UserAuthenticationServer).LoginUser(ctx, req.(*UserRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _UserAuthentication_Create_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UserAuthentication_CreateUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UserRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserAuthenticationServer).Create(ctx, in)
+		return srv.(UserAuthenticationServer).CreateUser(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/wcity.UserAuthentication/Create",
+		FullMethod: "/wcity.UserAuthentication/CreateUser",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserAuthenticationServer).Create(ctx, req.(*UserRequest))
+		return srv.(UserAuthenticationServer).CreateUser(ctx, req.(*UserRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _UserAuthentication_CheckToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(LogRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserAuthenticationServer).CheckToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/wcity.UserAuthentication/CheckToken",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserAuthenticationServer).CheckToken(ctx, req.(*LogRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _UserAuthentication_Logout_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(LogRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserAuthenticationServer).Logout(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/wcity.UserAuthentication/Logout",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserAuthenticationServer).Logout(ctx, req.(*LogRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -257,12 +420,20 @@ var _UserAuthentication_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*UserAuthenticationServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "CheckUser",
-			Handler:    _UserAuthentication_CheckUser_Handler,
+			MethodName: "LoginUser",
+			Handler:    _UserAuthentication_LoginUser_Handler,
 		},
 		{
-			MethodName: "Create",
-			Handler:    _UserAuthentication_Create_Handler,
+			MethodName: "CreateUser",
+			Handler:    _UserAuthentication_CreateUser_Handler,
+		},
+		{
+			MethodName: "CheckToken",
+			Handler:    _UserAuthentication_CheckToken_Handler,
+		},
+		{
+			MethodName: "Logout",
+			Handler:    _UserAuthentication_Logout_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
