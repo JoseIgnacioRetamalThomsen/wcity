@@ -542,41 +542,41 @@ func init() {
 func init() { proto.RegisterFile("postdb.proto", fileDescriptor_c309df17048d99e1) }
 
 var fileDescriptor_c309df17048d99e1 = []byte{
-	// 538 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0xbc, 0x95, 0xcd, 0x6e, 0xd3, 0x40,
-	0x10, 0xc7, 0x15, 0xbb, 0xf9, 0x9a, 0xa4, 0x2d, 0x5a, 0xd2, 0x60, 0x45, 0xad, 0x14, 0xf9, 0x54,
-	0x3e, 0xe4, 0x43, 0x79, 0x83, 0x24, 0x80, 0x40, 0xa2, 0xb2, 0x1c, 0x71, 0xe2, 0xe4, 0xd8, 0xab,
-	0x62, 0x61, 0x67, 0x8d, 0x77, 0x5b, 0xc8, 0x95, 0x37, 0x81, 0xe7, 0xe1, 0xa1, 0xd8, 0x0f, 0xaf,
-	0x9d, 0x8d, 0x6c, 0xe5, 0x50, 0xa9, 0x37, 0xcf, 0xfc, 0x9d, 0xff, 0x78, 0x7e, 0x33, 0x9b, 0x85,
-	0x71, 0x4e, 0x28, 0x8b, 0x37, 0x5e, 0x5e, 0x10, 0x46, 0x50, 0xf7, 0x67, 0x94, 0xb0, 0x9d, 0xfb,
-	0xdb, 0x82, 0xf1, 0x92, 0x3f, 0xf8, 0x5c, 0xf3, 0xd7, 0xab, 0x05, 0x72, 0xa0, 0x9f, 0x6c, 0x63,
-	0xfc, 0xeb, 0x63, 0xec, 0x74, 0xe6, 0x9d, 0xeb, 0x6e, 0xa0, 0x43, 0xe4, 0xc2, 0x38, 0x2a, 0x70,
-	0xc8, 0x48, 0xf1, 0x2e, 0x0b, 0x93, 0xd4, 0xb1, 0xb8, 0x3c, 0x0c, 0x8c, 0x1c, 0x9a, 0xc1, 0x40,
-	0xd8, 0xde, 0x86, 0x19, 0x76, 0x6c, 0xa9, 0x57, 0x31, 0x9a, 0xc3, 0x48, 0x3c, 0x2f, 0xc9, 0xfd,
-	0x96, 0x15, 0x3b, 0xe7, 0x44, 0xca, 0xfb, 0x29, 0x34, 0x81, 0x2e, 0x4b, 0x58, 0x8a, 0x9d, 0xae,
-	0xd4, 0x54, 0x80, 0x10, 0x9c, 0x6c, 0x48, 0xbc, 0x73, 0x7a, 0x32, 0x29, 0x9f, 0xd1, 0x25, 0x0c,
-	0x59, 0x92, 0xe1, 0x35, 0x0b, 0xb3, 0xdc, 0xe9, 0x4b, 0xa1, 0x4e, 0x08, 0x9f, 0x34, 0xf9, 0x8e,
-	0xa9, 0x33, 0x98, 0xdb, 0xc2, 0x47, 0x06, 0xa2, 0xb3, 0x8c, 0x6c, 0xef, 0x08, 0xef, 0x6c, 0x28,
-	0x7f, 0xa1, 0x43, 0xf7, 0x8f, 0x05, 0xa7, 0x7e, 0x1a, 0x46, 0xf8, 0x89, 0x28, 0xa8, 0x76, 0xa5,
-	0xac, 0x29, 0xd4, 0x29, 0xd1, 0x5b, 0x2e, 0x3e, 0x46, 0xea, 0x8a, 0x44, 0x9d, 0xa8, 0x19, 0xf5,
-	0x9a, 0x18, 0xf5, 0xdb, 0x18, 0x0d, 0x5a, 0x19, 0x0d, 0x5b, 0x18, 0x81, 0xc9, 0xe8, 0x13, 0x4c,
-	0x97, 0xa2, 0x47, 0xc9, 0x28, 0xc0, 0x34, 0x27, 0x5b, 0x8a, 0x25, 0xab, 0x29, 0xf4, 0x1e, 0xc2,
-	0x34, 0xc1, 0x0a, 0xd5, 0x20, 0x28, 0xa3, 0x7d, 0x86, 0x96, 0xc1, 0xd0, 0x7d, 0x03, 0xcf, 0x84,
-	0x0b, 0x0d, 0xf0, 0x8f, 0x7b, 0x7c, 0x8c, 0xb8, 0x5b, 0xc0, 0x85, 0xde, 0x50, 0x6a, 0x14, 0xe6,
-	0x2d, 0x88, 0x52, 0xba, 0xae, 0x0a, 0xda, 0xcb, 0xa2, 0x97, 0xd0, 0x15, 0x47, 0x80, 0xf2, 0x99,
-	0xd8, 0xd7, 0xa3, 0x9b, 0xe7, 0x9e, 0x3c, 0x02, 0xde, 0xfe, 0xfa, 0x07, 0xea, 0x0d, 0x97, 0xc1,
-	0xb4, 0x5a, 0x88, 0xc7, 0x15, 0x7d, 0x65, 0x16, 0x9d, 0x94, 0x45, 0x8d, 0x75, 0xd3, 0x55, 0xbf,
-	0xc2, 0xc5, 0x97, 0x3c, 0xae, 0x18, 0x1b, 0x70, 0xf4, 0x58, 0x3a, 0xc6, 0x58, 0xea, 0x75, 0xb0,
-	0x9a, 0xd6, 0xc1, 0xae, 0xd7, 0xc1, 0xf5, 0x60, 0xba, 0x6f, 0x7e, 0xac, 0xa5, 0x9b, 0x7f, 0x36,
-	0x3f, 0x14, 0xdf, 0xf8, 0x5f, 0x05, 0x5d, 0xe3, 0xe2, 0x21, 0x89, 0x30, 0x5a, 0xc1, 0x99, 0x5a,
-	0x01, 0x4d, 0x0c, 0x35, 0x21, 0x9c, 0x5d, 0xe9, 0x64, 0xf3, 0xba, 0xbc, 0x87, 0xf3, 0x52, 0xd1,
-	0x08, 0x50, 0x23, 0x94, 0xe3, 0x3e, 0xa7, 0x1f, 0x30, 0xab, 0xa7, 0x84, 0x5e, 0x68, 0x97, 0x83,
-	0xd5, 0x9a, 0x5d, 0x1e, 0x7c, 0x25, 0x3d, 0xf0, 0x19, 0x73, 0x9f, 0x4a, 0x6b, 0xb7, 0xb9, 0x3a,
-	0xfc, 0x4a, 0xd3, 0xe7, 0x16, 0xce, 0x4b, 0xbe, 0x55, 0x5f, 0xba, 0x70, 0xe3, 0x50, 0x2b, 0xbf,
-	0x96, 0xa9, 0x7c, 0x86, 0x33, 0xa5, 0x54, 0xb4, 0x1f, 0x63, 0xb7, 0x78, 0x0d, 0x93, 0x84, 0x78,
-	0x77, 0x45, 0x1e, 0x95, 0xef, 0xa9, 0xdb, 0x60, 0x31, 0x12, 0x6f, 0xae, 0x16, 0xbe, 0xb8, 0x14,
-	0xfc, 0xce, 0x5f, 0xcb, 0x0e, 0xfc, 0xe5, 0xa6, 0x27, 0xef, 0x88, 0xb7, 0xff, 0x03, 0x00, 0x00,
-	0xff, 0xff, 0xbc, 0xbd, 0x5c, 0x82, 0x33, 0x06, 0x00, 0x00,
+	// 534 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0xbc, 0x95, 0xcd, 0x6e, 0x9b, 0x40,
+	0x10, 0xc7, 0x65, 0x08, 0xfe, 0x18, 0x93, 0xa4, 0xda, 0x3a, 0x2e, 0xb2, 0x12, 0xc9, 0xe2, 0x94,
+	0x7e, 0x88, 0x43, 0xfa, 0x06, 0xb6, 0xdb, 0xaa, 0x95, 0x1a, 0x21, 0xac, 0x9e, 0x7a, 0xc2, 0xb0,
+	0x8a, 0x56, 0x05, 0x2f, 0x85, 0x4d, 0x5a, 0x5f, 0xfb, 0x26, 0xed, 0xeb, 0xf4, 0xa5, 0xca, 0xee,
+	0xb2, 0xe0, 0xb5, 0x40, 0x3e, 0x58, 0xea, 0x8d, 0x99, 0xff, 0xfa, 0x3f, 0x3b, 0xbf, 0x19, 0x6b,
+	0xc1, 0xce, 0x68, 0xc1, 0xe2, 0x8d, 0x97, 0xe5, 0x94, 0x51, 0x64, 0xfd, 0x88, 0x08, 0xdb, 0xb9,
+	0xbf, 0x0c, 0xb0, 0x97, 0xe5, 0x87, 0x5f, 0x6a, 0xfe, 0x7a, 0xb5, 0x40, 0x0e, 0x0c, 0xc8, 0x36,
+	0xc6, 0x3f, 0x3f, 0xc6, 0x4e, 0x6f, 0xde, 0xbb, 0xb5, 0x02, 0x15, 0x22, 0x17, 0xec, 0x28, 0xc7,
+	0x21, 0xa3, 0xf9, 0xbb, 0x34, 0x24, 0x89, 0x63, 0x94, 0xf2, 0x28, 0xd0, 0x72, 0x68, 0x06, 0x43,
+	0x6e, 0x7b, 0x1f, 0xa6, 0xd8, 0x31, 0x85, 0x5e, 0xc7, 0x68, 0x0e, 0x63, 0xfe, 0xbd, 0xa4, 0x8f,
+	0x5b, 0x96, 0xef, 0x9c, 0x33, 0x21, 0xef, 0xa7, 0xd0, 0x04, 0x2c, 0x46, 0x58, 0x82, 0x1d, 0x4b,
+	0x68, 0x32, 0x40, 0x08, 0xce, 0x36, 0x34, 0xde, 0x39, 0x7d, 0x91, 0x14, 0xdf, 0xe8, 0x1a, 0x46,
+	0x8c, 0xa4, 0x78, 0xcd, 0xc2, 0x34, 0x73, 0x06, 0x42, 0x68, 0x12, 0xdc, 0x27, 0x21, 0xdf, 0x70,
+	0xe1, 0x0c, 0xe7, 0x26, 0xf7, 0x11, 0x01, 0xef, 0x2c, 0xa5, 0xdb, 0x07, 0x5a, 0x76, 0x36, 0x12,
+	0xbf, 0x50, 0xa1, 0xfb, 0xdb, 0x80, 0x73, 0x3f, 0x09, 0x23, 0xfc, 0x9f, 0x28, 0xc8, 0x76, 0x85,
+	0xac, 0x28, 0x34, 0x29, 0xde, 0x5b, 0xc6, 0x2f, 0x23, 0x74, 0x49, 0xa2, 0x49, 0x34, 0x8c, 0xfa,
+	0x6d, 0x8c, 0x06, 0x5d, 0x8c, 0x86, 0x9d, 0x8c, 0x46, 0x1d, 0x8c, 0x40, 0x67, 0xf4, 0x09, 0xa6,
+	0x4b, 0xde, 0xa3, 0x60, 0x14, 0xe0, 0x22, 0xa3, 0xdb, 0x02, 0x0b, 0x56, 0x53, 0xe8, 0x3f, 0x85,
+	0x09, 0xc1, 0x12, 0xd5, 0x30, 0xa8, 0xa2, 0x7d, 0x86, 0x86, 0xc6, 0xd0, 0x7d, 0x03, 0xcf, 0xb8,
+	0x4b, 0x11, 0xe0, 0xef, 0x8f, 0xf8, 0x18, 0x71, 0x37, 0x87, 0x2b, 0xb5, 0xa1, 0x85, 0x56, 0xb8,
+	0x6c, 0x81, 0x97, 0x52, 0x75, 0x65, 0xd0, 0x5d, 0x16, 0xbd, 0x04, 0x8b, 0xff, 0x05, 0x8a, 0x72,
+	0x26, 0xe6, 0xed, 0xf8, 0xee, 0xb9, 0x27, 0xfe, 0x02, 0xde, 0xfe, 0xfa, 0x07, 0xf2, 0x84, 0xcb,
+	0x60, 0x5a, 0x2f, 0xc4, 0x69, 0x45, 0x5f, 0xe9, 0x45, 0x27, 0x55, 0x51, 0x6d, 0xdd, 0x54, 0xd5,
+	0xaf, 0x70, 0xf5, 0x25, 0x8b, 0x6b, 0xc6, 0x1a, 0x1c, 0x35, 0x96, 0x9e, 0x36, 0x96, 0x66, 0x1d,
+	0x8c, 0xb6, 0x75, 0x30, 0x9b, 0x75, 0x70, 0x3d, 0x98, 0xee, 0x9b, 0x1f, 0x6b, 0xe9, 0xee, 0xaf,
+	0x09, 0xb6, 0x68, 0x7f, 0x8d, 0xf3, 0x27, 0x12, 0x61, 0xb4, 0x82, 0x0b, 0xb9, 0x01, 0x0a, 0x18,
+	0x6a, 0x23, 0x38, 0xbb, 0x51, 0xc9, 0xf6, 0x6d, 0x79, 0x0f, 0x97, 0x95, 0xa2, 0x08, 0xa0, 0x56,
+	0x26, 0xc7, 0x7d, 0xce, 0x3f, 0x60, 0xd6, 0x0c, 0x09, 0xbd, 0x50, 0x2e, 0x07, 0x9b, 0x35, 0xbb,
+	0x3e, 0xb8, 0x65, 0x71, 0xe0, 0x63, 0x97, 0x3e, 0xb5, 0xd6, 0x6d, 0x73, 0x73, 0x78, 0x4b, 0xdd,
+	0xe7, 0x1e, 0x2e, 0x2b, 0xbc, 0x75, 0x5f, 0xaa, 0x70, 0xeb, 0x4c, 0x6b, 0xbf, 0x8e, 0xa1, 0x7c,
+	0x86, 0x0b, 0xa9, 0xd4, 0xb4, 0x4f, 0xb1, 0x5b, 0xbc, 0x86, 0x09, 0xa1, 0xde, 0x43, 0x9e, 0x45,
+	0xd5, 0x39, 0xf9, 0x18, 0x2c, 0xc6, 0xfc, 0xe4, 0x6a, 0xe1, 0xf3, 0x37, 0xc1, 0xef, 0xfd, 0x31,
+	0xcc, 0xc0, 0x5f, 0x6e, 0xfa, 0xe2, 0x89, 0x78, 0xfb, 0x2f, 0x00, 0x00, 0xff, 0xff, 0xc7, 0xbb,
+	0xcc, 0x35, 0x32, 0x06, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -587,10 +587,10 @@ var _ grpc.ClientConn
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
 
-// PhotosServiceClient is the client API for PhotosService service.
+// PostsServiceClient is the client API for PostsService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type PhotosServiceClient interface {
+type PostsServiceClient interface {
 	CreateCityPost(ctx context.Context, in *CityPostPSDB, opts ...grpc.CallOption) (*CreatePostResponsePSDB, error)
 	CreatePlacePost(ctx context.Context, in *PlacePostPSDB, opts ...grpc.CallOption) (*CreatePostResponsePSDB, error)
 	GetPlacePosts(ctx context.Context, in *PostsRequestPSDB, opts ...grpc.CallOption) (*CityPostsResponsePSDB, error)
@@ -599,70 +599,70 @@ type PhotosServiceClient interface {
 	UpdateCityPost(ctx context.Context, in *UpdatePostRequestPSDB, opts ...grpc.CallOption) (*UpdatePostResponsePSDB, error)
 }
 
-type photosServiceClient struct {
+type postsServiceClient struct {
 	cc *grpc.ClientConn
 }
 
-func NewPhotosServiceClient(cc *grpc.ClientConn) PhotosServiceClient {
-	return &photosServiceClient{cc}
+func NewPostsServiceClient(cc *grpc.ClientConn) PostsServiceClient {
+	return &postsServiceClient{cc}
 }
 
-func (c *photosServiceClient) CreateCityPost(ctx context.Context, in *CityPostPSDB, opts ...grpc.CallOption) (*CreatePostResponsePSDB, error) {
+func (c *postsServiceClient) CreateCityPost(ctx context.Context, in *CityPostPSDB, opts ...grpc.CallOption) (*CreatePostResponsePSDB, error) {
 	out := new(CreatePostResponsePSDB)
-	err := c.cc.Invoke(ctx, "/wcity.PhotosService/CreateCityPost", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/wcity.PostsService/CreateCityPost", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *photosServiceClient) CreatePlacePost(ctx context.Context, in *PlacePostPSDB, opts ...grpc.CallOption) (*CreatePostResponsePSDB, error) {
+func (c *postsServiceClient) CreatePlacePost(ctx context.Context, in *PlacePostPSDB, opts ...grpc.CallOption) (*CreatePostResponsePSDB, error) {
 	out := new(CreatePostResponsePSDB)
-	err := c.cc.Invoke(ctx, "/wcity.PhotosService/CreatePlacePost", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/wcity.PostsService/CreatePlacePost", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *photosServiceClient) GetPlacePosts(ctx context.Context, in *PostsRequestPSDB, opts ...grpc.CallOption) (*CityPostsResponsePSDB, error) {
+func (c *postsServiceClient) GetPlacePosts(ctx context.Context, in *PostsRequestPSDB, opts ...grpc.CallOption) (*CityPostsResponsePSDB, error) {
 	out := new(CityPostsResponsePSDB)
-	err := c.cc.Invoke(ctx, "/wcity.PhotosService/GetPlacePosts", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/wcity.PostsService/GetPlacePosts", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *photosServiceClient) GetCityPosts(ctx context.Context, in *PostsRequestPSDB, opts ...grpc.CallOption) (*PlacePostsResponsePSDB, error) {
+func (c *postsServiceClient) GetCityPosts(ctx context.Context, in *PostsRequestPSDB, opts ...grpc.CallOption) (*PlacePostsResponsePSDB, error) {
 	out := new(PlacePostsResponsePSDB)
-	err := c.cc.Invoke(ctx, "/wcity.PhotosService/GetCityPosts", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/wcity.PostsService/GetCityPosts", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *photosServiceClient) UpdatePlacePost(ctx context.Context, in *UpdatePostRequestPSDB, opts ...grpc.CallOption) (*UpdatePostResponsePSDB, error) {
+func (c *postsServiceClient) UpdatePlacePost(ctx context.Context, in *UpdatePostRequestPSDB, opts ...grpc.CallOption) (*UpdatePostResponsePSDB, error) {
 	out := new(UpdatePostResponsePSDB)
-	err := c.cc.Invoke(ctx, "/wcity.PhotosService/UpdatePlacePost", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/wcity.PostsService/UpdatePlacePost", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *photosServiceClient) UpdateCityPost(ctx context.Context, in *UpdatePostRequestPSDB, opts ...grpc.CallOption) (*UpdatePostResponsePSDB, error) {
+func (c *postsServiceClient) UpdateCityPost(ctx context.Context, in *UpdatePostRequestPSDB, opts ...grpc.CallOption) (*UpdatePostResponsePSDB, error) {
 	out := new(UpdatePostResponsePSDB)
-	err := c.cc.Invoke(ctx, "/wcity.PhotosService/UpdateCityPost", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/wcity.PostsService/UpdateCityPost", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// PhotosServiceServer is the server API for PhotosService service.
-type PhotosServiceServer interface {
+// PostsServiceServer is the server API for PostsService service.
+type PostsServiceServer interface {
 	CreateCityPost(context.Context, *CityPostPSDB) (*CreatePostResponsePSDB, error)
 	CreatePlacePost(context.Context, *PlacePostPSDB) (*CreatePostResponsePSDB, error)
 	GetPlacePosts(context.Context, *PostsRequestPSDB) (*CityPostsResponsePSDB, error)
@@ -671,168 +671,168 @@ type PhotosServiceServer interface {
 	UpdateCityPost(context.Context, *UpdatePostRequestPSDB) (*UpdatePostResponsePSDB, error)
 }
 
-// UnimplementedPhotosServiceServer can be embedded to have forward compatible implementations.
-type UnimplementedPhotosServiceServer struct {
+// UnimplementedPostsServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedPostsServiceServer struct {
 }
 
-func (*UnimplementedPhotosServiceServer) CreateCityPost(ctx context.Context, req *CityPostPSDB) (*CreatePostResponsePSDB, error) {
+func (*UnimplementedPostsServiceServer) CreateCityPost(ctx context.Context, req *CityPostPSDB) (*CreatePostResponsePSDB, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateCityPost not implemented")
 }
-func (*UnimplementedPhotosServiceServer) CreatePlacePost(ctx context.Context, req *PlacePostPSDB) (*CreatePostResponsePSDB, error) {
+func (*UnimplementedPostsServiceServer) CreatePlacePost(ctx context.Context, req *PlacePostPSDB) (*CreatePostResponsePSDB, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreatePlacePost not implemented")
 }
-func (*UnimplementedPhotosServiceServer) GetPlacePosts(ctx context.Context, req *PostsRequestPSDB) (*CityPostsResponsePSDB, error) {
+func (*UnimplementedPostsServiceServer) GetPlacePosts(ctx context.Context, req *PostsRequestPSDB) (*CityPostsResponsePSDB, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPlacePosts not implemented")
 }
-func (*UnimplementedPhotosServiceServer) GetCityPosts(ctx context.Context, req *PostsRequestPSDB) (*PlacePostsResponsePSDB, error) {
+func (*UnimplementedPostsServiceServer) GetCityPosts(ctx context.Context, req *PostsRequestPSDB) (*PlacePostsResponsePSDB, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetCityPosts not implemented")
 }
-func (*UnimplementedPhotosServiceServer) UpdatePlacePost(ctx context.Context, req *UpdatePostRequestPSDB) (*UpdatePostResponsePSDB, error) {
+func (*UnimplementedPostsServiceServer) UpdatePlacePost(ctx context.Context, req *UpdatePostRequestPSDB) (*UpdatePostResponsePSDB, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdatePlacePost not implemented")
 }
-func (*UnimplementedPhotosServiceServer) UpdateCityPost(ctx context.Context, req *UpdatePostRequestPSDB) (*UpdatePostResponsePSDB, error) {
+func (*UnimplementedPostsServiceServer) UpdateCityPost(ctx context.Context, req *UpdatePostRequestPSDB) (*UpdatePostResponsePSDB, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateCityPost not implemented")
 }
 
-func RegisterPhotosServiceServer(s *grpc.Server, srv PhotosServiceServer) {
-	s.RegisterService(&_PhotosService_serviceDesc, srv)
+func RegisterPostsServiceServer(s *grpc.Server, srv PostsServiceServer) {
+	s.RegisterService(&_PostsService_serviceDesc, srv)
 }
 
-func _PhotosService_CreateCityPost_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PostsService_CreateCityPost_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CityPostPSDB)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PhotosServiceServer).CreateCityPost(ctx, in)
+		return srv.(PostsServiceServer).CreateCityPost(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/wcity.PhotosService/CreateCityPost",
+		FullMethod: "/wcity.PostsService/CreateCityPost",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PhotosServiceServer).CreateCityPost(ctx, req.(*CityPostPSDB))
+		return srv.(PostsServiceServer).CreateCityPost(ctx, req.(*CityPostPSDB))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PhotosService_CreatePlacePost_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PostsService_CreatePlacePost_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(PlacePostPSDB)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PhotosServiceServer).CreatePlacePost(ctx, in)
+		return srv.(PostsServiceServer).CreatePlacePost(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/wcity.PhotosService/CreatePlacePost",
+		FullMethod: "/wcity.PostsService/CreatePlacePost",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PhotosServiceServer).CreatePlacePost(ctx, req.(*PlacePostPSDB))
+		return srv.(PostsServiceServer).CreatePlacePost(ctx, req.(*PlacePostPSDB))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PhotosService_GetPlacePosts_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PostsService_GetPlacePosts_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(PostsRequestPSDB)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PhotosServiceServer).GetPlacePosts(ctx, in)
+		return srv.(PostsServiceServer).GetPlacePosts(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/wcity.PhotosService/GetPlacePosts",
+		FullMethod: "/wcity.PostsService/GetPlacePosts",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PhotosServiceServer).GetPlacePosts(ctx, req.(*PostsRequestPSDB))
+		return srv.(PostsServiceServer).GetPlacePosts(ctx, req.(*PostsRequestPSDB))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PhotosService_GetCityPosts_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PostsService_GetCityPosts_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(PostsRequestPSDB)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PhotosServiceServer).GetCityPosts(ctx, in)
+		return srv.(PostsServiceServer).GetCityPosts(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/wcity.PhotosService/GetCityPosts",
+		FullMethod: "/wcity.PostsService/GetCityPosts",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PhotosServiceServer).GetCityPosts(ctx, req.(*PostsRequestPSDB))
+		return srv.(PostsServiceServer).GetCityPosts(ctx, req.(*PostsRequestPSDB))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PhotosService_UpdatePlacePost_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PostsService_UpdatePlacePost_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdatePostRequestPSDB)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PhotosServiceServer).UpdatePlacePost(ctx, in)
+		return srv.(PostsServiceServer).UpdatePlacePost(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/wcity.PhotosService/UpdatePlacePost",
+		FullMethod: "/wcity.PostsService/UpdatePlacePost",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PhotosServiceServer).UpdatePlacePost(ctx, req.(*UpdatePostRequestPSDB))
+		return srv.(PostsServiceServer).UpdatePlacePost(ctx, req.(*UpdatePostRequestPSDB))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PhotosService_UpdateCityPost_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PostsService_UpdateCityPost_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdatePostRequestPSDB)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PhotosServiceServer).UpdateCityPost(ctx, in)
+		return srv.(PostsServiceServer).UpdateCityPost(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/wcity.PhotosService/UpdateCityPost",
+		FullMethod: "/wcity.PostsService/UpdateCityPost",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PhotosServiceServer).UpdateCityPost(ctx, req.(*UpdatePostRequestPSDB))
+		return srv.(PostsServiceServer).UpdateCityPost(ctx, req.(*UpdatePostRequestPSDB))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _PhotosService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "wcity.PhotosService",
-	HandlerType: (*PhotosServiceServer)(nil),
+var _PostsService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "wcity.PostsService",
+	HandlerType: (*PostsServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "CreateCityPost",
-			Handler:    _PhotosService_CreateCityPost_Handler,
+			Handler:    _PostsService_CreateCityPost_Handler,
 		},
 		{
 			MethodName: "CreatePlacePost",
-			Handler:    _PhotosService_CreatePlacePost_Handler,
+			Handler:    _PostsService_CreatePlacePost_Handler,
 		},
 		{
 			MethodName: "GetPlacePosts",
-			Handler:    _PhotosService_GetPlacePosts_Handler,
+			Handler:    _PostsService_GetPlacePosts_Handler,
 		},
 		{
 			MethodName: "GetCityPosts",
-			Handler:    _PhotosService_GetCityPosts_Handler,
+			Handler:    _PostsService_GetCityPosts_Handler,
 		},
 		{
 			MethodName: "UpdatePlacePost",
-			Handler:    _PhotosService_UpdatePlacePost_Handler,
+			Handler:    _PostsService_UpdatePlacePost_Handler,
 		},
 		{
 			MethodName: "UpdateCityPost",
-			Handler:    _PhotosService_UpdateCityPost_Handler,
+			Handler:    _PostsService_UpdateCityPost_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
