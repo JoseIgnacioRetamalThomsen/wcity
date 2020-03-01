@@ -464,77 +464,6 @@ func (m *AddPostPhotoDBAResponse) GetTimeStamp() string {
 	return ""
 }
 
-type ProfilePhotoDBA struct {
-	Id                   int32    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	UserEmail            string   `protobuf:"bytes,2,opt,name=userEmail,proto3" json:"userEmail,omitempty"`
-	Url                  string   `protobuf:"bytes,3,opt,name=url,proto3" json:"url,omitempty"`
-	Timestamp            string   `protobuf:"bytes,4,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
-	Selected             bool     `protobuf:"varint,5,opt,name=selected,proto3" json:"selected,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *ProfilePhotoDBA) Reset()         { *m = ProfilePhotoDBA{} }
-func (m *ProfilePhotoDBA) String() string { return proto.CompactTextString(m) }
-func (*ProfilePhotoDBA) ProtoMessage()    {}
-func (*ProfilePhotoDBA) Descriptor() ([]byte, []int) {
-	return fileDescriptor_3d9ff4e76b59f186, []int{8}
-}
-
-func (m *ProfilePhotoDBA) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ProfilePhotoDBA.Unmarshal(m, b)
-}
-func (m *ProfilePhotoDBA) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ProfilePhotoDBA.Marshal(b, m, deterministic)
-}
-func (m *ProfilePhotoDBA) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ProfilePhotoDBA.Merge(m, src)
-}
-func (m *ProfilePhotoDBA) XXX_Size() int {
-	return xxx_messageInfo_ProfilePhotoDBA.Size(m)
-}
-func (m *ProfilePhotoDBA) XXX_DiscardUnknown() {
-	xxx_messageInfo_ProfilePhotoDBA.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_ProfilePhotoDBA proto.InternalMessageInfo
-
-func (m *ProfilePhotoDBA) GetId() int32 {
-	if m != nil {
-		return m.Id
-	}
-	return 0
-}
-
-func (m *ProfilePhotoDBA) GetUserEmail() string {
-	if m != nil {
-		return m.UserEmail
-	}
-	return ""
-}
-
-func (m *ProfilePhotoDBA) GetUrl() string {
-	if m != nil {
-		return m.Url
-	}
-	return ""
-}
-
-func (m *ProfilePhotoDBA) GetTimestamp() string {
-	if m != nil {
-		return m.Timestamp
-	}
-	return ""
-}
-
-func (m *ProfilePhotoDBA) GetSelected() bool {
-	if m != nil {
-		return m.Selected
-	}
-	return false
-}
-
 type GetProfilePhotosDBARequest struct {
 	UserEmail            string   `protobuf:"bytes,1,opt,name=userEmail,proto3" json:"userEmail,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -546,7 +475,7 @@ func (m *GetProfilePhotosDBARequest) Reset()         { *m = GetProfilePhotosDBAR
 func (m *GetProfilePhotosDBARequest) String() string { return proto.CompactTextString(m) }
 func (*GetProfilePhotosDBARequest) ProtoMessage()    {}
 func (*GetProfilePhotosDBARequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_3d9ff4e76b59f186, []int{9}
+	return fileDescriptor_3d9ff4e76b59f186, []int{8}
 }
 
 func (m *GetProfilePhotosDBARequest) XXX_Unmarshal(b []byte) error {
@@ -575,18 +504,18 @@ func (m *GetProfilePhotosDBARequest) GetUserEmail() string {
 }
 
 type GetProfilePhotosDBAResponse struct {
-	Sucess               bool                          `protobuf:"varint,1,opt,name=sucess,proto3" json:"sucess,omitempty"`
-	Photos               []*GetProfilePhotosDBARequest `protobuf:"bytes,2,rep,name=photos,proto3" json:"photos,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}                      `json:"-"`
-	XXX_unrecognized     []byte                        `json:"-"`
-	XXX_sizecache        int32                         `json:"-"`
+	Sucess               bool            `protobuf:"varint,1,opt,name=sucess,proto3" json:"sucess,omitempty"`
+	Photos               []*ProfilePhoto `protobuf:"bytes,2,rep,name=photos,proto3" json:"photos,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
 }
 
 func (m *GetProfilePhotosDBAResponse) Reset()         { *m = GetProfilePhotosDBAResponse{} }
 func (m *GetProfilePhotosDBAResponse) String() string { return proto.CompactTextString(m) }
 func (*GetProfilePhotosDBAResponse) ProtoMessage()    {}
 func (*GetProfilePhotosDBAResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_3d9ff4e76b59f186, []int{10}
+	return fileDescriptor_3d9ff4e76b59f186, []int{9}
 }
 
 func (m *GetProfilePhotosDBAResponse) XXX_Unmarshal(b []byte) error {
@@ -614,82 +543,11 @@ func (m *GetProfilePhotosDBAResponse) GetSucess() bool {
 	return false
 }
 
-func (m *GetProfilePhotosDBAResponse) GetPhotos() []*GetProfilePhotosDBARequest {
+func (m *GetProfilePhotosDBAResponse) GetPhotos() []*ProfilePhoto {
 	if m != nil {
 		return m.Photos
 	}
 	return nil
-}
-
-type CityPhotoDBA struct {
-	Id                   int32    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	CityId               int32    `protobuf:"varint,2,opt,name=cityId,proto3" json:"cityId,omitempty"`
-	Url                  string   `protobuf:"bytes,3,opt,name=url,proto3" json:"url,omitempty"`
-	Timestamp            string   `protobuf:"bytes,4,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
-	Selected             bool     `protobuf:"varint,5,opt,name=selected,proto3" json:"selected,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *CityPhotoDBA) Reset()         { *m = CityPhotoDBA{} }
-func (m *CityPhotoDBA) String() string { return proto.CompactTextString(m) }
-func (*CityPhotoDBA) ProtoMessage()    {}
-func (*CityPhotoDBA) Descriptor() ([]byte, []int) {
-	return fileDescriptor_3d9ff4e76b59f186, []int{11}
-}
-
-func (m *CityPhotoDBA) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_CityPhotoDBA.Unmarshal(m, b)
-}
-func (m *CityPhotoDBA) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_CityPhotoDBA.Marshal(b, m, deterministic)
-}
-func (m *CityPhotoDBA) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_CityPhotoDBA.Merge(m, src)
-}
-func (m *CityPhotoDBA) XXX_Size() int {
-	return xxx_messageInfo_CityPhotoDBA.Size(m)
-}
-func (m *CityPhotoDBA) XXX_DiscardUnknown() {
-	xxx_messageInfo_CityPhotoDBA.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_CityPhotoDBA proto.InternalMessageInfo
-
-func (m *CityPhotoDBA) GetId() int32 {
-	if m != nil {
-		return m.Id
-	}
-	return 0
-}
-
-func (m *CityPhotoDBA) GetCityId() int32 {
-	if m != nil {
-		return m.CityId
-	}
-	return 0
-}
-
-func (m *CityPhotoDBA) GetUrl() string {
-	if m != nil {
-		return m.Url
-	}
-	return ""
-}
-
-func (m *CityPhotoDBA) GetTimestamp() string {
-	if m != nil {
-		return m.Timestamp
-	}
-	return ""
-}
-
-func (m *CityPhotoDBA) GetSelected() bool {
-	if m != nil {
-		return m.Selected
-	}
-	return false
 }
 
 type GetCityPhotosDBARequest struct {
@@ -703,7 +561,7 @@ func (m *GetCityPhotosDBARequest) Reset()         { *m = GetCityPhotosDBARequest
 func (m *GetCityPhotosDBARequest) String() string { return proto.CompactTextString(m) }
 func (*GetCityPhotosDBARequest) ProtoMessage()    {}
 func (*GetCityPhotosDBARequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_3d9ff4e76b59f186, []int{12}
+	return fileDescriptor_3d9ff4e76b59f186, []int{10}
 }
 
 func (m *GetCityPhotosDBARequest) XXX_Unmarshal(b []byte) error {
@@ -732,18 +590,18 @@ func (m *GetCityPhotosDBARequest) GetCityId() int32 {
 }
 
 type GetCityPhotosDBAResponse struct {
-	Sucess               bool            `protobuf:"varint,1,opt,name=sucess,proto3" json:"sucess,omitempty"`
-	Urls                 []*CityPhotoDBA `protobuf:"bytes,2,rep,name=urls,proto3" json:"urls,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
-	XXX_unrecognized     []byte          `json:"-"`
-	XXX_sizecache        int32           `json:"-"`
+	Sucess               bool         `protobuf:"varint,1,opt,name=sucess,proto3" json:"sucess,omitempty"`
+	Photos               []*CityPhoto `protobuf:"bytes,2,rep,name=photos,proto3" json:"photos,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
+	XXX_unrecognized     []byte       `json:"-"`
+	XXX_sizecache        int32        `json:"-"`
 }
 
 func (m *GetCityPhotosDBAResponse) Reset()         { *m = GetCityPhotosDBAResponse{} }
 func (m *GetCityPhotosDBAResponse) String() string { return proto.CompactTextString(m) }
 func (*GetCityPhotosDBAResponse) ProtoMessage()    {}
 func (*GetCityPhotosDBAResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_3d9ff4e76b59f186, []int{13}
+	return fileDescriptor_3d9ff4e76b59f186, []int{11}
 }
 
 func (m *GetCityPhotosDBAResponse) XXX_Unmarshal(b []byte) error {
@@ -771,82 +629,11 @@ func (m *GetCityPhotosDBAResponse) GetSucess() bool {
 	return false
 }
 
-func (m *GetCityPhotosDBAResponse) GetUrls() []*CityPhotoDBA {
+func (m *GetCityPhotosDBAResponse) GetPhotos() []*CityPhoto {
 	if m != nil {
-		return m.Urls
+		return m.Photos
 	}
 	return nil
-}
-
-type PlacePhotoDBA struct {
-	Id                   int32    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	PlaceId              int32    `protobuf:"varint,2,opt,name=placeId,proto3" json:"placeId,omitempty"`
-	Url                  string   `protobuf:"bytes,3,opt,name=url,proto3" json:"url,omitempty"`
-	Timestamp            string   `protobuf:"bytes,4,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
-	Selected             bool     `protobuf:"varint,5,opt,name=selected,proto3" json:"selected,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PlacePhotoDBA) Reset()         { *m = PlacePhotoDBA{} }
-func (m *PlacePhotoDBA) String() string { return proto.CompactTextString(m) }
-func (*PlacePhotoDBA) ProtoMessage()    {}
-func (*PlacePhotoDBA) Descriptor() ([]byte, []int) {
-	return fileDescriptor_3d9ff4e76b59f186, []int{14}
-}
-
-func (m *PlacePhotoDBA) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PlacePhotoDBA.Unmarshal(m, b)
-}
-func (m *PlacePhotoDBA) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PlacePhotoDBA.Marshal(b, m, deterministic)
-}
-func (m *PlacePhotoDBA) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PlacePhotoDBA.Merge(m, src)
-}
-func (m *PlacePhotoDBA) XXX_Size() int {
-	return xxx_messageInfo_PlacePhotoDBA.Size(m)
-}
-func (m *PlacePhotoDBA) XXX_DiscardUnknown() {
-	xxx_messageInfo_PlacePhotoDBA.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PlacePhotoDBA proto.InternalMessageInfo
-
-func (m *PlacePhotoDBA) GetId() int32 {
-	if m != nil {
-		return m.Id
-	}
-	return 0
-}
-
-func (m *PlacePhotoDBA) GetPlaceId() int32 {
-	if m != nil {
-		return m.PlaceId
-	}
-	return 0
-}
-
-func (m *PlacePhotoDBA) GetUrl() string {
-	if m != nil {
-		return m.Url
-	}
-	return ""
-}
-
-func (m *PlacePhotoDBA) GetTimestamp() string {
-	if m != nil {
-		return m.Timestamp
-	}
-	return ""
-}
-
-func (m *PlacePhotoDBA) GetSelected() bool {
-	if m != nil {
-		return m.Selected
-	}
-	return false
 }
 
 type GetPlacePhotosDBARequest struct {
@@ -860,7 +647,7 @@ func (m *GetPlacePhotosDBARequest) Reset()         { *m = GetPlacePhotosDBAReque
 func (m *GetPlacePhotosDBARequest) String() string { return proto.CompactTextString(m) }
 func (*GetPlacePhotosDBARequest) ProtoMessage()    {}
 func (*GetPlacePhotosDBARequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_3d9ff4e76b59f186, []int{15}
+	return fileDescriptor_3d9ff4e76b59f186, []int{12}
 }
 
 func (m *GetPlacePhotosDBARequest) XXX_Unmarshal(b []byte) error {
@@ -889,18 +676,18 @@ func (m *GetPlacePhotosDBARequest) GetPlaceId() int32 {
 }
 
 type GetPlacePhotosDBAResponse struct {
-	Sucess               bool             `protobuf:"varint,1,opt,name=sucess,proto3" json:"sucess,omitempty"`
-	Photos               []*PlacePhotoDBA `protobuf:"bytes,2,rep,name=photos,proto3" json:"photos,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
-	XXX_unrecognized     []byte           `json:"-"`
-	XXX_sizecache        int32            `json:"-"`
+	Sucess               bool          `protobuf:"varint,1,opt,name=sucess,proto3" json:"sucess,omitempty"`
+	Photos               []*PlacePhoto `protobuf:"bytes,2,rep,name=photos,proto3" json:"photos,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
+	XXX_unrecognized     []byte        `json:"-"`
+	XXX_sizecache        int32         `json:"-"`
 }
 
 func (m *GetPlacePhotosDBAResponse) Reset()         { *m = GetPlacePhotosDBAResponse{} }
 func (m *GetPlacePhotosDBAResponse) String() string { return proto.CompactTextString(m) }
 func (*GetPlacePhotosDBAResponse) ProtoMessage()    {}
 func (*GetPlacePhotosDBAResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_3d9ff4e76b59f186, []int{16}
+	return fileDescriptor_3d9ff4e76b59f186, []int{13}
 }
 
 func (m *GetPlacePhotosDBAResponse) XXX_Unmarshal(b []byte) error {
@@ -928,82 +715,11 @@ func (m *GetPlacePhotosDBAResponse) GetSucess() bool {
 	return false
 }
 
-func (m *GetPlacePhotosDBAResponse) GetPhotos() []*PlacePhotoDBA {
+func (m *GetPlacePhotosDBAResponse) GetPhotos() []*PlacePhoto {
 	if m != nil {
 		return m.Photos
 	}
 	return nil
-}
-
-type PostPhotoDBA struct {
-	Id                   int32    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	PostId               string   `protobuf:"bytes,2,opt,name=postId,proto3" json:"postId,omitempty"`
-	Url                  string   `protobuf:"bytes,3,opt,name=url,proto3" json:"url,omitempty"`
-	Timestamp            string   `protobuf:"bytes,4,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
-	Selected             bool     `protobuf:"varint,5,opt,name=selected,proto3" json:"selected,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PostPhotoDBA) Reset()         { *m = PostPhotoDBA{} }
-func (m *PostPhotoDBA) String() string { return proto.CompactTextString(m) }
-func (*PostPhotoDBA) ProtoMessage()    {}
-func (*PostPhotoDBA) Descriptor() ([]byte, []int) {
-	return fileDescriptor_3d9ff4e76b59f186, []int{17}
-}
-
-func (m *PostPhotoDBA) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PostPhotoDBA.Unmarshal(m, b)
-}
-func (m *PostPhotoDBA) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PostPhotoDBA.Marshal(b, m, deterministic)
-}
-func (m *PostPhotoDBA) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PostPhotoDBA.Merge(m, src)
-}
-func (m *PostPhotoDBA) XXX_Size() int {
-	return xxx_messageInfo_PostPhotoDBA.Size(m)
-}
-func (m *PostPhotoDBA) XXX_DiscardUnknown() {
-	xxx_messageInfo_PostPhotoDBA.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PostPhotoDBA proto.InternalMessageInfo
-
-func (m *PostPhotoDBA) GetId() int32 {
-	if m != nil {
-		return m.Id
-	}
-	return 0
-}
-
-func (m *PostPhotoDBA) GetPostId() string {
-	if m != nil {
-		return m.PostId
-	}
-	return ""
-}
-
-func (m *PostPhotoDBA) GetUrl() string {
-	if m != nil {
-		return m.Url
-	}
-	return ""
-}
-
-func (m *PostPhotoDBA) GetTimestamp() string {
-	if m != nil {
-		return m.Timestamp
-	}
-	return ""
-}
-
-func (m *PostPhotoDBA) GetSelected() bool {
-	if m != nil {
-		return m.Selected
-	}
-	return false
 }
 
 type GetPostPhotosDBARequest struct {
@@ -1017,7 +733,7 @@ func (m *GetPostPhotosDBARequest) Reset()         { *m = GetPostPhotosDBARequest
 func (m *GetPostPhotosDBARequest) String() string { return proto.CompactTextString(m) }
 func (*GetPostPhotosDBARequest) ProtoMessage()    {}
 func (*GetPostPhotosDBARequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_3d9ff4e76b59f186, []int{18}
+	return fileDescriptor_3d9ff4e76b59f186, []int{14}
 }
 
 func (m *GetPostPhotosDBARequest) XXX_Unmarshal(b []byte) error {
@@ -1046,18 +762,18 @@ func (m *GetPostPhotosDBARequest) GetPlaceId() string {
 }
 
 type GetPostPhotosDBAResponse struct {
-	Sucess               bool            `protobuf:"varint,1,opt,name=sucess,proto3" json:"sucess,omitempty"`
-	Photos               []*PostPhotoDBA `protobuf:"bytes,2,rep,name=photos,proto3" json:"photos,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
-	XXX_unrecognized     []byte          `json:"-"`
-	XXX_sizecache        int32           `json:"-"`
+	Sucess               bool         `protobuf:"varint,1,opt,name=sucess,proto3" json:"sucess,omitempty"`
+	Photos               []*PostPhoto `protobuf:"bytes,2,rep,name=photos,proto3" json:"photos,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
+	XXX_unrecognized     []byte       `json:"-"`
+	XXX_sizecache        int32        `json:"-"`
 }
 
 func (m *GetPostPhotosDBAResponse) Reset()         { *m = GetPostPhotosDBAResponse{} }
 func (m *GetPostPhotosDBAResponse) String() string { return proto.CompactTextString(m) }
 func (*GetPostPhotosDBAResponse) ProtoMessage()    {}
 func (*GetPostPhotosDBAResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_3d9ff4e76b59f186, []int{19}
+	return fileDescriptor_3d9ff4e76b59f186, []int{15}
 }
 
 func (m *GetPostPhotosDBAResponse) XXX_Unmarshal(b []byte) error {
@@ -1085,7 +801,7 @@ func (m *GetPostPhotosDBAResponse) GetSucess() bool {
 	return false
 }
 
-func (m *GetPostPhotosDBAResponse) GetPhotos() []*PostPhotoDBA {
+func (m *GetPostPhotosDBAResponse) GetPhotos() []*PostPhoto {
 	if m != nil {
 		return m.Photos
 	}
@@ -1101,16 +817,12 @@ func init() {
 	proto.RegisterType((*AddPlacePhotoDBAResponse)(nil), "wcity.AddPlacePhotoDBAResponse")
 	proto.RegisterType((*AddPostPhotoDBARequest)(nil), "wcity.AddPostPhotoDBARequest")
 	proto.RegisterType((*AddPostPhotoDBAResponse)(nil), "wcity.AddPostPhotoDBAResponse")
-	proto.RegisterType((*ProfilePhotoDBA)(nil), "wcity.ProfilePhotoDBA")
 	proto.RegisterType((*GetProfilePhotosDBARequest)(nil), "wcity.GetProfilePhotosDBARequest")
 	proto.RegisterType((*GetProfilePhotosDBAResponse)(nil), "wcity.GetProfilePhotosDBAResponse")
-	proto.RegisterType((*CityPhotoDBA)(nil), "wcity.CityPhotoDBA")
 	proto.RegisterType((*GetCityPhotosDBARequest)(nil), "wcity.GetCityPhotosDBARequest")
 	proto.RegisterType((*GetCityPhotosDBAResponse)(nil), "wcity.GetCityPhotosDBAResponse")
-	proto.RegisterType((*PlacePhotoDBA)(nil), "wcity.PlacePhotoDBA")
 	proto.RegisterType((*GetPlacePhotosDBARequest)(nil), "wcity.GetPlacePhotosDBARequest")
 	proto.RegisterType((*GetPlacePhotosDBAResponse)(nil), "wcity.GetPlacePhotosDBAResponse")
-	proto.RegisterType((*PostPhotoDBA)(nil), "wcity.PostPhotoDBA")
 	proto.RegisterType((*GetPostPhotosDBARequest)(nil), "wcity.GetPostPhotosDBARequest")
 	proto.RegisterType((*GetPostPhotosDBAResponse)(nil), "wcity.GetPostPhotosDBAResponse")
 }
@@ -1118,50 +830,44 @@ func init() {
 func init() { proto.RegisterFile("photosdba.proto", fileDescriptor_3d9ff4e76b59f186) }
 
 var fileDescriptor_3d9ff4e76b59f186 = []byte{
-	// 676 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0xac, 0x56, 0x4d, 0x6f, 0xd3, 0x30,
-	0x18, 0x56, 0xd2, 0x75, 0xb4, 0x2f, 0x8c, 0x56, 0x1e, 0xda, 0xb2, 0xf0, 0xd5, 0xe5, 0xc2, 0x24,
-	0xa6, 0x4a, 0x6c, 0x5c, 0xe0, 0xb6, 0x0e, 0x84, 0xb8, 0x45, 0x2e, 0x1c, 0xd0, 0x24, 0xa6, 0x36,
-	0x31, 0x23, 0x52, 0x4b, 0x42, 0x9c, 0x82, 0xb8, 0x22, 0x71, 0xe2, 0x5f, 0xf0, 0x53, 0xf8, 0x65,
-	0x38, 0xae, 0x93, 0xd8, 0x89, 0xd3, 0xb4, 0xa8, 0xb7, 0xd8, 0x7d, 0x3f, 0x9e, 0xe7, 0xf1, 0xfb,
-	0x51, 0xe8, 0x45, 0x9f, 0xc3, 0x24, 0xa4, 0xfe, 0x74, 0x32, 0x8c, 0x62, 0xf6, 0x85, 0xda, 0xdf,
-	0xbd, 0x20, 0xf9, 0xe1, 0xdc, 0xc0, 0xd1, 0x85, 0xef, 0xbb, 0x71, 0xf8, 0x29, 0x98, 0x11, 0x37,
-	0xb5, 0x79, 0x35, 0xba, 0xc0, 0xe4, 0xeb, 0x82, 0xd0, 0x04, 0x3d, 0x80, 0xee, 0x82, 0x92, 0xf8,
-	0xf5, 0x7c, 0x12, 0xcc, 0x2c, 0x63, 0x60, 0x9c, 0x74, 0x71, 0x71, 0x81, 0xfa, 0xd0, 0x5a, 0xc4,
-	0x33, 0xcb, 0xe4, 0xf7, 0xe9, 0x27, 0xb2, 0xa1, 0x43, 0xc9, 0x8c, 0x78, 0x09, 0xf1, 0xad, 0x16,
-	0xbb, 0xee, 0xe0, 0xfc, 0xec, 0xf8, 0x60, 0xeb, 0x12, 0xd1, 0x28, 0xfc, 0x42, 0x09, 0xb2, 0xe0,
-	0x16, 0x5d, 0x78, 0x1e, 0xa1, 0x94, 0xe7, 0xe9, 0xe0, 0xec, 0x88, 0xee, 0x82, 0x19, 0xf8, 0x3c,
-	0x49, 0x1b, 0xb3, 0xaf, 0x14, 0x53, 0x12, 0xcc, 0xc9, 0x38, 0x99, 0xcc, 0x23, 0x9e, 0x84, 0x61,
-	0xca, 0x2f, 0x9c, 0x8f, 0x70, 0xc0, 0xb2, 0x5c, 0x32, 0x66, 0x65, 0x2e, 0x07, 0xb0, 0x9b, 0x12,
-	0x7e, 0xeb, 0xf3, 0x04, 0x6d, 0x2c, 0x4e, 0x1b, 0xb2, 0x98, 0xc0, 0x61, 0x25, 0xfe, 0xff, 0x50,
-	0x78, 0x57, 0x4f, 0x61, 0x99, 0xc2, 0x9d, 0x4d, 0xbc, 0xca, 0x7b, 0xb0, 0x14, 0x51, 0x7a, 0x9f,
-	0x93, 0xc8, 0x8e, 0x1b, 0xb2, 0x98, 0x82, 0x55, 0x4d, 0xb1, 0x0e, 0x0d, 0x9a, 0xd3, 0xa0, 0xeb,
-	0xbd, 0x84, 0x1b, 0xd2, 0x44, 0xf3, 0x12, 0x11, 0xbb, 0x16, 0x24, 0xba, 0x58, 0x9c, 0x36, 0xe4,
-	0x70, 0xbd, 0x94, 0x49, 0x89, 0x2f, 0x28, 0xb0, 0x04, 0x0c, 0x73, 0xc1, 0x40, 0x9c, 0x36, 0x2c,
-	0xa5, 0xdf, 0x06, 0xf4, 0x4a, 0xe5, 0x2a, 0x22, 0x18, 0x72, 0x84, 0xa2, 0x41, 0xcc, 0x9a, 0x06,
-	0x69, 0x15, 0x84, 0x44, 0x46, 0xca, 0x33, 0xee, 0x14, 0x19, 0xf9, 0x85, 0x42, 0xb7, 0x5d, 0xa2,
-	0xfb, 0x12, 0xec, 0x37, 0x24, 0x91, 0xf1, 0xd0, 0x75, 0x1b, 0xd5, 0x89, 0xe0, 0xbe, 0xd6, 0xb7,
-	0x41, 0xae, 0x17, 0xec, 0x9d, 0xb8, 0x31, 0x63, 0xd6, 0x3a, 0xb9, 0x7d, 0x76, 0x3c, 0xe4, 0x23,
-	0x63, 0x58, 0x8f, 0x03, 0x0b, 0x07, 0xe7, 0xa7, 0x01, 0x77, 0xe4, 0x26, 0xa9, 0x08, 0x57, 0x74,
-	0xa3, 0xa9, 0xeb, 0xc6, 0xad, 0x48, 0xf6, 0x0c, 0x0e, 0x19, 0xd4, 0x1c, 0x06, 0x6d, 0x1e, 0x06,
-	0xce, 0x15, 0x58, 0x55, 0x97, 0x06, 0x99, 0x9e, 0xc0, 0x0e, 0xc3, 0x99, 0x89, 0xb4, 0x2f, 0x44,
-	0x52, 0x46, 0x04, 0x37, 0x70, 0x7e, 0x19, 0xb0, 0xa7, 0xf4, 0x5c, 0x45, 0x15, 0xa9, 0xbf, 0x4d,
-	0x6d, 0x7f, 0x6f, 0x45, 0x97, 0xe7, 0x9c, 0x64, 0x81, 0x84, 0xae, 0x33, 0x61, 0xd8, 0x58, 0x3a,
-	0xd2, 0x78, 0x35, 0x68, 0x73, 0x5a, 0x2a, 0xa1, 0x7b, 0x42, 0x1d, 0x75, 0xf4, 0xc8, 0x55, 0x23,
-	0x37, 0xb4, 0xae, 0x6a, 0xc4, 0xe4, 0x30, 0x75, 0x93, 0x63, 0x2b, 0xea, 0x9c, 0xf3, 0xaa, 0xc9,
-	0x61, 0xac, 0x10, 0xa7, 0x5b, 0x88, 0x73, 0xbd, 0x94, 0x54, 0x75, 0x6a, 0xd0, 0xe6, 0x69, 0x49,
-	0x9b, 0xac, 0x72, 0x94, 0x91, 0x26, 0x4c, 0xce, 0xfe, 0xb6, 0xa1, 0x9f, 0x87, 0x1e, 0x93, 0xf8,
-	0x5b, 0xe0, 0x11, 0xf4, 0x01, 0x50, 0x75, 0xa5, 0xa2, 0x81, 0x88, 0x53, 0xbb, 0xd6, 0xed, 0xe3,
-	0x15, 0x16, 0x02, 0xb4, 0x0b, 0xbd, 0xd2, 0x9e, 0x43, 0x0f, 0x0b, 0x2f, 0xcd, 0x7e, 0xb5, 0x1f,
-	0xd5, 0xfd, 0x2c, 0x22, 0x8e, 0xa1, 0x5f, 0xde, 0x39, 0x48, 0xf2, 0xd1, 0xed, 0x3b, 0xfb, 0x71,
-	0xed, 0xef, 0x0a, 0x4c, 0xa5, 0x66, 0x24, 0x98, 0x9a, 0xe5, 0x23, 0xc3, 0xd4, 0xee, 0x8e, 0x2b,
-	0x40, 0xa5, 0xf9, 0x96, 0x06, 0x6d, 0x1e, 0x7d, 0xb6, 0xb3, 0xca, 0x44, 0x04, 0xc7, 0xd0, 0x93,
-	0xc7, 0x8b, 0x2c, 0x41, 0xcd, 0xa4, 0xca, 0x25, 0xa8, 0x1d, 0x4b, 0xef, 0xa1, 0xaf, 0xf4, 0x65,
-	0x1a, 0x54, 0x72, 0xd2, 0xb6, 0xb9, 0x3d, 0xa8, 0x37, 0x50, 0xa0, 0x2a, 0xca, 0x4a, 0x50, 0x75,
-	0xed, 0x21, 0x43, 0xd5, 0x76, 0xc2, 0xe8, 0x14, 0xf6, 0x83, 0x70, 0x78, 0x13, 0x47, 0x9e, 0xb0,
-	0xe4, 0xc5, 0x3d, 0xda, 0xcb, 0x32, 0xb8, 0xe9, 0x1f, 0x53, 0xd7, 0xf8, 0x63, 0xb6, 0xb0, 0x7b,
-	0x39, 0xdd, 0xe5, 0xff, 0x53, 0xcf, 0xff, 0x05, 0x00, 0x00, 0xff, 0xff, 0x14, 0x00, 0x0a, 0x86,
-	0xba, 0x0a, 0x00, 0x00,
+	// 591 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0x9c, 0x56, 0xcd, 0x8e, 0xd3, 0x30,
+	0x10, 0x56, 0x5b, 0x75, 0x69, 0x07, 0x41, 0x83, 0x57, 0xda, 0xcd, 0x9a, 0xbf, 0x92, 0x53, 0x11,
+	0xa8, 0x12, 0xbb, 0x9c, 0xb8, 0x6d, 0x17, 0x84, 0xb8, 0x45, 0x2e, 0x1c, 0x10, 0x88, 0x55, 0x9a,
+	0x98, 0xdd, 0x48, 0x29, 0x09, 0x71, 0x0a, 0xe2, 0x75, 0x78, 0x14, 0x9e, 0x0c, 0xc7, 0x75, 0x1c,
+	0x27, 0x71, 0xfa, 0x77, 0x8b, 0xc7, 0x33, 0xdf, 0x7c, 0xdf, 0x78, 0x66, 0x14, 0x18, 0x25, 0xb7,
+	0x71, 0x16, 0xb3, 0x60, 0xe1, 0x4d, 0x93, 0x94, 0x7f, 0xa1, 0xfe, 0x6f, 0x3f, 0xcc, 0xfe, 0x60,
+	0x24, 0xec, 0xd7, 0xec, 0xd6, 0x4b, 0x69, 0xb0, 0xbe, 0x72, 0x6e, 0xe0, 0xec, 0x32, 0x08, 0xdc,
+	0x34, 0xfe, 0x1e, 0x46, 0xd4, 0xcd, 0xef, 0xdf, 0xce, 0x2e, 0x09, 0xfd, 0xb9, 0xa2, 0x2c, 0x43,
+	0x8f, 0x60, 0xb8, 0x62, 0x34, 0x7d, 0xb7, 0xf4, 0xc2, 0xc8, 0xee, 0x8c, 0x3b, 0x93, 0x21, 0x29,
+	0x0d, 0xc8, 0x82, 0xde, 0x2a, 0x8d, 0xec, 0xae, 0xb0, 0xe7, 0x9f, 0x08, 0xc3, 0x80, 0xd1, 0x88,
+	0xfa, 0x19, 0x0d, 0xec, 0x1e, 0x37, 0x0f, 0x88, 0x3a, 0x3b, 0x01, 0x60, 0x53, 0x22, 0x96, 0xc4,
+	0x3f, 0x18, 0x45, 0x36, 0xdc, 0x61, 0x2b, 0xdf, 0xa7, 0x8c, 0x89, 0x3c, 0x03, 0x52, 0x1c, 0xd1,
+	0x7d, 0xe8, 0x86, 0x81, 0x48, 0xd2, 0x27, 0xfc, 0x2b, 0xe7, 0x94, 0x85, 0x4b, 0x3a, 0xcf, 0xbc,
+	0x65, 0x22, 0x92, 0x70, 0x4e, 0xca, 0xe0, 0x7c, 0x83, 0x13, 0x9e, 0xe5, 0x8a, 0xab, 0xad, 0x6b,
+	0x39, 0x81, 0xa3, 0xbc, 0x08, 0x1f, 0x02, 0x91, 0xa0, 0x4f, 0xe4, 0x69, 0x4f, 0x15, 0x1e, 0x9c,
+	0x36, 0xf0, 0x0f, 0x91, 0xf0, 0xb1, 0x5d, 0xc2, 0x3a, 0x85, 0x1b, 0x79, 0x7e, 0xe3, 0x3d, 0x78,
+	0x8a, 0x24, 0xb7, 0x2b, 0x11, 0xc5, 0x71, 0x4f, 0x15, 0x0b, 0xb0, 0x9b, 0x29, 0x76, 0x91, 0xc1,
+	0x94, 0x0c, 0xb6, 0xdb, 0x4b, 0xb8, 0x31, 0xcb, 0x0c, 0x2f, 0x91, 0x70, 0xb3, 0x14, 0x31, 0x24,
+	0xf2, 0xb4, 0xa7, 0x86, 0xeb, 0x75, 0x99, 0x2a, 0xf8, 0x52, 0x02, 0x4f, 0xc0, 0x39, 0x97, 0x0a,
+	0xe4, 0x69, 0xcf, 0x56, 0x7a, 0x03, 0xf8, 0x3d, 0xcd, 0xf4, 0x86, 0x65, 0xbb, 0x8e, 0x06, 0x2f,
+	0xf0, 0x43, 0x63, 0xec, 0x16, 0x82, 0x2f, 0x78, 0x65, 0x84, 0x33, 0x27, 0xd9, 0x9b, 0xdc, 0x3d,
+	0x3f, 0x9e, 0x8a, 0xc1, 0x9d, 0xea, 0x40, 0x44, 0xba, 0x38, 0xaf, 0xe0, 0x94, 0xe7, 0x50, 0xad,
+	0xc8, 0xb6, 0xf7, 0xba, 0xf3, 0x15, 0xec, 0x66, 0xc8, 0x16, 0x4e, 0x93, 0x1a, 0x27, 0x4b, 0x72,
+	0x52, 0x28, 0x8a, 0xd0, 0x6b, 0x81, 0x5e, 0x76, 0x15, 0xdb, 0xa5, 0x73, 0x79, 0x9f, 0x9c, 0x19,
+	0xa2, 0xb6, 0x90, 0x7a, 0x5e, 0x23, 0xf5, 0xa0, 0x28, 0x94, 0x82, 0x51, 0xac, 0x2e, 0x44, 0x99,
+	0x54, 0x9f, 0x6c, 0x20, 0x35, 0x2c, 0x49, 0xad, 0x0b, 0x55, 0x0b, 0x3a, 0xb0, 0x50, 0x0a, 0xa5,
+	0xa0, 0x74, 0xfe, 0xaf, 0x0f, 0x96, 0xc2, 0x9d, 0xd3, 0xf4, 0x57, 0xe8, 0x53, 0xf4, 0x19, 0x50,
+	0x73, 0x3f, 0xa2, 0xb1, 0x04, 0x69, 0xdd, 0xd1, 0xf8, 0xd9, 0x06, 0x0f, 0xc9, 0xd8, 0x85, 0x51,
+	0x6d, 0x69, 0xa1, 0xc7, 0x65, 0x94, 0x61, 0x59, 0xe2, 0x27, 0x6d, 0xd7, 0x12, 0x71, 0x0e, 0x56,
+	0x7d, 0x81, 0x20, 0x2d, 0xc6, 0xb4, 0xbc, 0xf0, 0xd3, 0xd6, 0xfb, 0x0a, 0x4d, 0x7d, 0xa2, 0x75,
+	0x9a, 0x86, 0x4d, 0xa2, 0xd3, 0x34, 0x2e, 0x82, 0x2f, 0x80, 0x6a, 0x63, 0x98, 0x83, 0x16, 0x15,
+	0x6b, 0x9f, 0x6e, 0xec, 0x6c, 0x72, 0x91, 0xe0, 0x04, 0x46, 0xfa, 0x30, 0xe9, 0x25, 0x68, 0x99,
+	0x4b, 0x55, 0x82, 0xd6, 0x21, 0xfc, 0x04, 0x56, 0x65, 0x18, 0x72, 0x50, 0x2d, 0xc8, 0x38, 0x5b,
+	0x78, 0xdc, 0xee, 0x50, 0xa1, 0x5a, 0xa9, 0xac, 0x46, 0xd5, 0x34, 0x1b, 0x3a, 0x55, 0xe3, 0x18,
+	0xcc, 0x5e, 0xc2, 0x71, 0x18, 0x4f, 0x6f, 0xd2, 0xc4, 0x97, 0x9e, 0xa2, 0xb9, 0x67, 0xf7, 0x8a,
+	0x0c, 0x6e, 0xfe, 0x7b, 0xe1, 0x76, 0xfe, 0x76, 0x7b, 0xc4, 0xbd, 0x5a, 0x1c, 0x89, 0xbf, 0x8d,
+	0x8b, 0xff, 0x01, 0x00, 0x00, 0xff, 0xff, 0x4a, 0x6b, 0xf4, 0x91, 0x9b, 0x08, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
