@@ -808,6 +808,264 @@ func (m *GetPostPhotosDBAResponse) GetPhotos() []*PostPhoto {
 	return nil
 }
 
+type GetCitysPhotoRequest struct {
+	Valid                bool     `protobuf:"varint,1,opt,name=valid,proto3" json:"valid,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *GetCitysPhotoRequest) Reset()         { *m = GetCitysPhotoRequest{} }
+func (m *GetCitysPhotoRequest) String() string { return proto.CompactTextString(m) }
+func (*GetCitysPhotoRequest) ProtoMessage()    {}
+func (*GetCitysPhotoRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_3d9ff4e76b59f186, []int{16}
+}
+
+func (m *GetCitysPhotoRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetCitysPhotoRequest.Unmarshal(m, b)
+}
+func (m *GetCitysPhotoRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetCitysPhotoRequest.Marshal(b, m, deterministic)
+}
+func (m *GetCitysPhotoRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetCitysPhotoRequest.Merge(m, src)
+}
+func (m *GetCitysPhotoRequest) XXX_Size() int {
+	return xxx_messageInfo_GetCitysPhotoRequest.Size(m)
+}
+func (m *GetCitysPhotoRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetCitysPhotoRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetCitysPhotoRequest proto.InternalMessageInfo
+
+func (m *GetCitysPhotoRequest) GetValid() bool {
+	if m != nil {
+		return m.Valid
+	}
+	return false
+}
+
+type GetCitysPhotoResponse struct {
+	Success              bool          `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
+	CityPhotos           []*CitysPhoto `protobuf:"bytes,2,rep,name=cityPhotos,proto3" json:"cityPhotos,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
+	XXX_unrecognized     []byte        `json:"-"`
+	XXX_sizecache        int32         `json:"-"`
+}
+
+func (m *GetCitysPhotoResponse) Reset()         { *m = GetCitysPhotoResponse{} }
+func (m *GetCitysPhotoResponse) String() string { return proto.CompactTextString(m) }
+func (*GetCitysPhotoResponse) ProtoMessage()    {}
+func (*GetCitysPhotoResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_3d9ff4e76b59f186, []int{17}
+}
+
+func (m *GetCitysPhotoResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetCitysPhotoResponse.Unmarshal(m, b)
+}
+func (m *GetCitysPhotoResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetCitysPhotoResponse.Marshal(b, m, deterministic)
+}
+func (m *GetCitysPhotoResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetCitysPhotoResponse.Merge(m, src)
+}
+func (m *GetCitysPhotoResponse) XXX_Size() int {
+	return xxx_messageInfo_GetCitysPhotoResponse.Size(m)
+}
+func (m *GetCitysPhotoResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetCitysPhotoResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetCitysPhotoResponse proto.InternalMessageInfo
+
+func (m *GetCitysPhotoResponse) GetSuccess() bool {
+	if m != nil {
+		return m.Success
+	}
+	return false
+}
+
+func (m *GetCitysPhotoResponse) GetCityPhotos() []*CitysPhoto {
+	if m != nil {
+		return m.CityPhotos
+	}
+	return nil
+}
+
+type GetPlacesPhotosPerCityRequest struct {
+	PlaceId              int32    `protobuf:"varint,3,opt,name=placeId,proto3" json:"placeId,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *GetPlacesPhotosPerCityRequest) Reset()         { *m = GetPlacesPhotosPerCityRequest{} }
+func (m *GetPlacesPhotosPerCityRequest) String() string { return proto.CompactTextString(m) }
+func (*GetPlacesPhotosPerCityRequest) ProtoMessage()    {}
+func (*GetPlacesPhotosPerCityRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_3d9ff4e76b59f186, []int{18}
+}
+
+func (m *GetPlacesPhotosPerCityRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetPlacesPhotosPerCityRequest.Unmarshal(m, b)
+}
+func (m *GetPlacesPhotosPerCityRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetPlacesPhotosPerCityRequest.Marshal(b, m, deterministic)
+}
+func (m *GetPlacesPhotosPerCityRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPlacesPhotosPerCityRequest.Merge(m, src)
+}
+func (m *GetPlacesPhotosPerCityRequest) XXX_Size() int {
+	return xxx_messageInfo_GetPlacesPhotosPerCityRequest.Size(m)
+}
+func (m *GetPlacesPhotosPerCityRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetPlacesPhotosPerCityRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetPlacesPhotosPerCityRequest proto.InternalMessageInfo
+
+func (m *GetPlacesPhotosPerCityRequest) GetPlaceId() int32 {
+	if m != nil {
+		return m.PlaceId
+	}
+	return 0
+}
+
+type GetPlacesPhotosPerCityResponse struct {
+	Success              bool                `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
+	PlacePhotos          []*PlacesCityPhotos `protobuf:"bytes,2,rep,name=placePhotos,proto3" json:"placePhotos,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}            `json:"-"`
+	XXX_unrecognized     []byte              `json:"-"`
+	XXX_sizecache        int32               `json:"-"`
+}
+
+func (m *GetPlacesPhotosPerCityResponse) Reset()         { *m = GetPlacesPhotosPerCityResponse{} }
+func (m *GetPlacesPhotosPerCityResponse) String() string { return proto.CompactTextString(m) }
+func (*GetPlacesPhotosPerCityResponse) ProtoMessage()    {}
+func (*GetPlacesPhotosPerCityResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_3d9ff4e76b59f186, []int{19}
+}
+
+func (m *GetPlacesPhotosPerCityResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetPlacesPhotosPerCityResponse.Unmarshal(m, b)
+}
+func (m *GetPlacesPhotosPerCityResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetPlacesPhotosPerCityResponse.Marshal(b, m, deterministic)
+}
+func (m *GetPlacesPhotosPerCityResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPlacesPhotosPerCityResponse.Merge(m, src)
+}
+func (m *GetPlacesPhotosPerCityResponse) XXX_Size() int {
+	return xxx_messageInfo_GetPlacesPhotosPerCityResponse.Size(m)
+}
+func (m *GetPlacesPhotosPerCityResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetPlacesPhotosPerCityResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetPlacesPhotosPerCityResponse proto.InternalMessageInfo
+
+func (m *GetPlacesPhotosPerCityResponse) GetSuccess() bool {
+	if m != nil {
+		return m.Success
+	}
+	return false
+}
+
+func (m *GetPlacesPhotosPerCityResponse) GetPlacePhotos() []*PlacesCityPhotos {
+	if m != nil {
+		return m.PlacePhotos
+	}
+	return nil
+}
+
+type GetPostsPhotosPerIdRequest struct {
+	PostId               string   `protobuf:"bytes,3,opt,name=postId,proto3" json:"postId,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *GetPostsPhotosPerIdRequest) Reset()         { *m = GetPostsPhotosPerIdRequest{} }
+func (m *GetPostsPhotosPerIdRequest) String() string { return proto.CompactTextString(m) }
+func (*GetPostsPhotosPerIdRequest) ProtoMessage()    {}
+func (*GetPostsPhotosPerIdRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_3d9ff4e76b59f186, []int{20}
+}
+
+func (m *GetPostsPhotosPerIdRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetPostsPhotosPerIdRequest.Unmarshal(m, b)
+}
+func (m *GetPostsPhotosPerIdRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetPostsPhotosPerIdRequest.Marshal(b, m, deterministic)
+}
+func (m *GetPostsPhotosPerIdRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPostsPhotosPerIdRequest.Merge(m, src)
+}
+func (m *GetPostsPhotosPerIdRequest) XXX_Size() int {
+	return xxx_messageInfo_GetPostsPhotosPerIdRequest.Size(m)
+}
+func (m *GetPostsPhotosPerIdRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetPostsPhotosPerIdRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetPostsPhotosPerIdRequest proto.InternalMessageInfo
+
+func (m *GetPostsPhotosPerIdRequest) GetPostId() string {
+	if m != nil {
+		return m.PostId
+	}
+	return ""
+}
+
+type GetPostsPhotosPerIdResponse struct {
+	Success              bool          `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
+	PlacesPhoto          []*PlacePhoto `protobuf:"bytes,2,rep,name=placesPhoto,proto3" json:"placesPhoto,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
+	XXX_unrecognized     []byte        `json:"-"`
+	XXX_sizecache        int32         `json:"-"`
+}
+
+func (m *GetPostsPhotosPerIdResponse) Reset()         { *m = GetPostsPhotosPerIdResponse{} }
+func (m *GetPostsPhotosPerIdResponse) String() string { return proto.CompactTextString(m) }
+func (*GetPostsPhotosPerIdResponse) ProtoMessage()    {}
+func (*GetPostsPhotosPerIdResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_3d9ff4e76b59f186, []int{21}
+}
+
+func (m *GetPostsPhotosPerIdResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetPostsPhotosPerIdResponse.Unmarshal(m, b)
+}
+func (m *GetPostsPhotosPerIdResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetPostsPhotosPerIdResponse.Marshal(b, m, deterministic)
+}
+func (m *GetPostsPhotosPerIdResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetPostsPhotosPerIdResponse.Merge(m, src)
+}
+func (m *GetPostsPhotosPerIdResponse) XXX_Size() int {
+	return xxx_messageInfo_GetPostsPhotosPerIdResponse.Size(m)
+}
+func (m *GetPostsPhotosPerIdResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetPostsPhotosPerIdResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetPostsPhotosPerIdResponse proto.InternalMessageInfo
+
+func (m *GetPostsPhotosPerIdResponse) GetSuccess() bool {
+	if m != nil {
+		return m.Success
+	}
+	return false
+}
+
+func (m *GetPostsPhotosPerIdResponse) GetPlacesPhoto() []*PlacePhoto {
+	if m != nil {
+		return m.PlacesPhoto
+	}
+	return nil
+}
+
 func init() {
 	proto.RegisterType((*AddProfilePhotoDBARequest)(nil), "wcity.AddProfilePhotoDBARequest")
 	proto.RegisterType((*AddProfilePhotoDBAResponse)(nil), "wcity.AddProfilePhotoDBAResponse")
@@ -825,49 +1083,66 @@ func init() {
 	proto.RegisterType((*GetPlacePhotosDBAResponse)(nil), "wcity.GetPlacePhotosDBAResponse")
 	proto.RegisterType((*GetPostPhotosDBARequest)(nil), "wcity.GetPostPhotosDBARequest")
 	proto.RegisterType((*GetPostPhotosDBAResponse)(nil), "wcity.GetPostPhotosDBAResponse")
+	proto.RegisterType((*GetCitysPhotoRequest)(nil), "wcity.GetCitysPhotoRequest")
+	proto.RegisterType((*GetCitysPhotoResponse)(nil), "wcity.GetCitysPhotoResponse")
+	proto.RegisterType((*GetPlacesPhotosPerCityRequest)(nil), "wcity.GetPlacesPhotosPerCityRequest")
+	proto.RegisterType((*GetPlacesPhotosPerCityResponse)(nil), "wcity.GetPlacesPhotosPerCityResponse")
+	proto.RegisterType((*GetPostsPhotosPerIdRequest)(nil), "wcity.GetPostsPhotosPerIdRequest")
+	proto.RegisterType((*GetPostsPhotosPerIdResponse)(nil), "wcity.GetPostsPhotosPerIdResponse")
 }
 
 func init() { proto.RegisterFile("photosdba.proto", fileDescriptor_3d9ff4e76b59f186) }
 
 var fileDescriptor_3d9ff4e76b59f186 = []byte{
-	// 591 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0x9c, 0x56, 0xcd, 0x8e, 0xd3, 0x30,
-	0x10, 0x56, 0x5b, 0x75, 0x69, 0x07, 0x41, 0x83, 0x57, 0xda, 0xcd, 0x9a, 0xbf, 0x92, 0x53, 0x11,
-	0xa8, 0x12, 0xbb, 0x9c, 0xb8, 0x6d, 0x17, 0x84, 0xb8, 0x45, 0x2e, 0x1c, 0x10, 0x88, 0x55, 0x9a,
-	0x98, 0xdd, 0x48, 0x29, 0x09, 0x71, 0x0a, 0xe2, 0x75, 0x78, 0x14, 0x9e, 0x0c, 0xc7, 0x75, 0x1c,
-	0x27, 0x71, 0xfa, 0x77, 0x8b, 0xc7, 0x33, 0xdf, 0x7c, 0xdf, 0x78, 0x66, 0x14, 0x18, 0x25, 0xb7,
-	0x71, 0x16, 0xb3, 0x60, 0xe1, 0x4d, 0x93, 0x94, 0x7f, 0xa1, 0xfe, 0x6f, 0x3f, 0xcc, 0xfe, 0x60,
-	0x24, 0xec, 0xd7, 0xec, 0xd6, 0x4b, 0x69, 0xb0, 0xbe, 0x72, 0x6e, 0xe0, 0xec, 0x32, 0x08, 0xdc,
-	0x34, 0xfe, 0x1e, 0x46, 0xd4, 0xcd, 0xef, 0xdf, 0xce, 0x2e, 0x09, 0xfd, 0xb9, 0xa2, 0x2c, 0x43,
-	0x8f, 0x60, 0xb8, 0x62, 0x34, 0x7d, 0xb7, 0xf4, 0xc2, 0xc8, 0xee, 0x8c, 0x3b, 0x93, 0x21, 0x29,
-	0x0d, 0xc8, 0x82, 0xde, 0x2a, 0x8d, 0xec, 0xae, 0xb0, 0xe7, 0x9f, 0x08, 0xc3, 0x80, 0xd1, 0x88,
-	0xfa, 0x19, 0x0d, 0xec, 0x1e, 0x37, 0x0f, 0x88, 0x3a, 0x3b, 0x01, 0x60, 0x53, 0x22, 0x96, 0xc4,
-	0x3f, 0x18, 0x45, 0x36, 0xdc, 0x61, 0x2b, 0xdf, 0xa7, 0x8c, 0x89, 0x3c, 0x03, 0x52, 0x1c, 0xd1,
-	0x7d, 0xe8, 0x86, 0x81, 0x48, 0xd2, 0x27, 0xfc, 0x2b, 0xe7, 0x94, 0x85, 0x4b, 0x3a, 0xcf, 0xbc,
-	0x65, 0x22, 0x92, 0x70, 0x4e, 0xca, 0xe0, 0x7c, 0x83, 0x13, 0x9e, 0xe5, 0x8a, 0xab, 0xad, 0x6b,
-	0x39, 0x81, 0xa3, 0xbc, 0x08, 0x1f, 0x02, 0x91, 0xa0, 0x4f, 0xe4, 0x69, 0x4f, 0x15, 0x1e, 0x9c,
-	0x36, 0xf0, 0x0f, 0x91, 0xf0, 0xb1, 0x5d, 0xc2, 0x3a, 0x85, 0x1b, 0x79, 0x7e, 0xe3, 0x3d, 0x78,
-	0x8a, 0x24, 0xb7, 0x2b, 0x11, 0xc5, 0x71, 0x4f, 0x15, 0x0b, 0xb0, 0x9b, 0x29, 0x76, 0x91, 0xc1,
-	0x94, 0x0c, 0xb6, 0xdb, 0x4b, 0xb8, 0x31, 0xcb, 0x0c, 0x2f, 0x91, 0x70, 0xb3, 0x14, 0x31, 0x24,
-	0xf2, 0xb4, 0xa7, 0x86, 0xeb, 0x75, 0x99, 0x2a, 0xf8, 0x52, 0x02, 0x4f, 0xc0, 0x39, 0x97, 0x0a,
-	0xe4, 0x69, 0xcf, 0x56, 0x7a, 0x03, 0xf8, 0x3d, 0xcd, 0xf4, 0x86, 0x65, 0xbb, 0x8e, 0x06, 0x2f,
-	0xf0, 0x43, 0x63, 0xec, 0x16, 0x82, 0x2f, 0x78, 0x65, 0x84, 0x33, 0x27, 0xd9, 0x9b, 0xdc, 0x3d,
-	0x3f, 0x9e, 0x8a, 0xc1, 0x9d, 0xea, 0x40, 0x44, 0xba, 0x38, 0xaf, 0xe0, 0x94, 0xe7, 0x50, 0xad,
-	0xc8, 0xb6, 0xf7, 0xba, 0xf3, 0x15, 0xec, 0x66, 0xc8, 0x16, 0x4e, 0x93, 0x1a, 0x27, 0x4b, 0x72,
-	0x52, 0x28, 0x8a, 0xd0, 0x6b, 0x81, 0x5e, 0x76, 0x15, 0xdb, 0xa5, 0x73, 0x79, 0x9f, 0x9c, 0x19,
-	0xa2, 0xb6, 0x90, 0x7a, 0x5e, 0x23, 0xf5, 0xa0, 0x28, 0x94, 0x82, 0x51, 0xac, 0x2e, 0x44, 0x99,
-	0x54, 0x9f, 0x6c, 0x20, 0x35, 0x2c, 0x49, 0xad, 0x0b, 0x55, 0x0b, 0x3a, 0xb0, 0x50, 0x0a, 0xa5,
-	0xa0, 0x74, 0xfe, 0xaf, 0x0f, 0x96, 0xc2, 0x9d, 0xd3, 0xf4, 0x57, 0xe8, 0x53, 0xf4, 0x19, 0x50,
-	0x73, 0x3f, 0xa2, 0xb1, 0x04, 0x69, 0xdd, 0xd1, 0xf8, 0xd9, 0x06, 0x0f, 0xc9, 0xd8, 0x85, 0x51,
-	0x6d, 0x69, 0xa1, 0xc7, 0x65, 0x94, 0x61, 0x59, 0xe2, 0x27, 0x6d, 0xd7, 0x12, 0x71, 0x0e, 0x56,
-	0x7d, 0x81, 0x20, 0x2d, 0xc6, 0xb4, 0xbc, 0xf0, 0xd3, 0xd6, 0xfb, 0x0a, 0x4d, 0x7d, 0xa2, 0x75,
-	0x9a, 0x86, 0x4d, 0xa2, 0xd3, 0x34, 0x2e, 0x82, 0x2f, 0x80, 0x6a, 0x63, 0x98, 0x83, 0x16, 0x15,
-	0x6b, 0x9f, 0x6e, 0xec, 0x6c, 0x72, 0x91, 0xe0, 0x04, 0x46, 0xfa, 0x30, 0xe9, 0x25, 0x68, 0x99,
-	0x4b, 0x55, 0x82, 0xd6, 0x21, 0xfc, 0x04, 0x56, 0x65, 0x18, 0x72, 0x50, 0x2d, 0xc8, 0x38, 0x5b,
-	0x78, 0xdc, 0xee, 0x50, 0xa1, 0x5a, 0xa9, 0xac, 0x46, 0xd5, 0x34, 0x1b, 0x3a, 0x55, 0xe3, 0x18,
-	0xcc, 0x5e, 0xc2, 0x71, 0x18, 0x4f, 0x6f, 0xd2, 0xc4, 0x97, 0x9e, 0xa2, 0xb9, 0x67, 0xf7, 0x8a,
-	0x0c, 0x6e, 0xfe, 0x7b, 0xe1, 0x76, 0xfe, 0x76, 0x7b, 0xc4, 0xbd, 0x5a, 0x1c, 0x89, 0xbf, 0x8d,
-	0x8b, 0xff, 0x01, 0x00, 0x00, 0xff, 0xff, 0x4a, 0x6b, 0xf4, 0x91, 0x9b, 0x08, 0x00, 0x00,
+	// 757 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0x9c, 0x56, 0xdd, 0x4e, 0xd4, 0x40,
+	0x14, 0x0e, 0x34, 0x0b, 0xec, 0x21, 0xca, 0x32, 0x20, 0x94, 0xe1, 0x47, 0x6c, 0x34, 0xc1, 0x48,
+	0x36, 0x01, 0xbc, 0xc1, 0x3b, 0x40, 0x63, 0xb8, 0x31, 0x4d, 0xd1, 0x0b, 0x23, 0x91, 0x94, 0x76,
+	0x84, 0x26, 0x5d, 0x5b, 0x3b, 0x5d, 0x8c, 0xaf, 0xe3, 0x5b, 0xf9, 0x36, 0x4e, 0xa7, 0xd3, 0xe9,
+	0xb4, 0x9d, 0x6e, 0x77, 0xb9, 0xeb, 0xcc, 0x9c, 0x9f, 0xef, 0x3b, 0xe7, 0xcc, 0x37, 0x85, 0x95,
+	0xf8, 0x3e, 0x4a, 0x23, 0xea, 0xdf, 0xba, 0xc3, 0x38, 0x61, 0x5f, 0xa8, 0xf7, 0xdb, 0x0b, 0xd2,
+	0x3f, 0x18, 0xf1, 0xfd, 0x1b, 0x7a, 0xef, 0x26, 0xc4, 0xcf, 0x8f, 0xac, 0x3b, 0xd8, 0x3a, 0xf3,
+	0x7d, 0x3b, 0x89, 0x7e, 0x04, 0x21, 0xb1, 0xb3, 0xf3, 0xf7, 0xe7, 0x67, 0x0e, 0xf9, 0x35, 0x26,
+	0x34, 0x45, 0x3b, 0xd0, 0x1f, 0x53, 0x92, 0x7c, 0x18, 0xb9, 0x41, 0x68, 0xce, 0xed, 0xcf, 0x1d,
+	0xf4, 0x9d, 0x72, 0x03, 0x0d, 0xc0, 0x18, 0x27, 0xa1, 0x39, 0xcf, 0xf7, 0xb3, 0x4f, 0x84, 0x61,
+	0x89, 0x92, 0x90, 0x78, 0x29, 0xf1, 0x4d, 0x83, 0x6d, 0x2f, 0x39, 0x72, 0x6d, 0xf9, 0x80, 0x75,
+	0x89, 0x68, 0x1c, 0xfd, 0xa4, 0x04, 0x99, 0xb0, 0x48, 0xc7, 0x9e, 0x47, 0x28, 0xe5, 0x79, 0x96,
+	0x9c, 0x62, 0x89, 0x9e, 0xc2, 0x7c, 0xe0, 0xf3, 0x24, 0x3d, 0x87, 0x7d, 0x65, 0x98, 0xd2, 0x60,
+	0x44, 0xae, 0x52, 0x77, 0x14, 0xf3, 0x24, 0x0c, 0x93, 0xdc, 0xb0, 0xbe, 0xc3, 0x06, 0xcb, 0x72,
+	0xc1, 0xd8, 0xd6, 0xb9, 0x6c, 0xc0, 0x42, 0x56, 0x84, 0x4b, 0x9f, 0x27, 0xe8, 0x39, 0x62, 0x35,
+	0x23, 0x0b, 0x17, 0x36, 0x1b, 0xf1, 0x1f, 0x43, 0xe1, 0x73, 0x3b, 0x85, 0x3c, 0x85, 0x1d, 0xba,
+	0x5e, 0xa3, 0x1f, 0x2c, 0x45, 0x9c, 0xed, 0x4b, 0x12, 0xc5, 0x72, 0x46, 0x16, 0xb7, 0x60, 0x36,
+	0x53, 0x4c, 0x43, 0x83, 0x4a, 0x1a, 0x74, 0xba, 0x4e, 0xd8, 0x11, 0x4d, 0x35, 0x9d, 0x88, 0xd9,
+	0xb6, 0x20, 0xd1, 0x77, 0xc4, 0x6a, 0x46, 0x0e, 0x37, 0x79, 0x99, 0x2a, 0xf1, 0x05, 0x05, 0x96,
+	0x80, 0x61, 0x2e, 0x19, 0x88, 0xd5, 0x8c, 0xa3, 0xf4, 0x0e, 0xf0, 0x47, 0x92, 0xaa, 0x03, 0x4b,
+	0xa7, 0xbd, 0x1a, 0xac, 0xc0, 0xdb, 0x5a, 0xdf, 0x0e, 0x80, 0x6f, 0x58, 0x65, 0xb8, 0x31, 0x03,
+	0x69, 0x1c, 0x2c, 0x1f, 0xaf, 0x0d, 0xf9, 0xc5, 0x1d, 0xaa, 0x81, 0x1c, 0x61, 0x62, 0x1d, 0xc1,
+	0x26, 0xcb, 0x21, 0x47, 0x91, 0x76, 0xcf, 0xba, 0x75, 0x0d, 0x66, 0xd3, 0xa5, 0x03, 0xd3, 0x41,
+	0x0d, 0xd3, 0x40, 0x60, 0x92, 0x51, 0x24, 0xa0, 0xb7, 0x3c, 0x7a, 0x39, 0x55, 0x74, 0x9a, 0xc9,
+	0x65, 0x73, 0xb2, 0xa5, 0xf1, 0xea, 0x00, 0xf5, 0xba, 0x06, 0x6a, 0xb5, 0x28, 0x94, 0x0c, 0x23,
+	0x51, 0x9d, 0xf0, 0x32, 0xc9, 0x39, 0x99, 0x00, 0xaa, 0x5f, 0x82, 0xca, 0x0b, 0x55, 0x73, 0x7a,
+	0x64, 0xa1, 0x64, 0x14, 0x09, 0xe9, 0x10, 0xd6, 0x45, 0x1b, 0x68, 0x7e, 0x20, 0xf0, 0xac, 0x43,
+	0xef, 0xc1, 0x0d, 0x03, 0x5f, 0x04, 0xce, 0x17, 0x4c, 0x38, 0x9f, 0xd5, 0xac, 0x3b, 0x6f, 0xea,
+	0x11, 0x80, 0x27, 0x9b, 0x5c, 0x2b, 0x91, 0x12, 0x48, 0x31, 0xb2, 0x4e, 0x61, 0xb7, 0x68, 0x43,
+	0x7e, 0x4a, 0x6d, 0x92, 0x64, 0xb6, 0x9a, 0x62, 0x19, 0xd5, 0x0e, 0x8e, 0x61, 0xaf, 0xcd, 0xb5,
+	0x13, 0xe9, 0x29, 0x2c, 0xc7, 0x65, 0xeb, 0x05, 0xd4, 0x4d, 0xb5, 0x9b, 0xb4, 0x1c, 0x57, 0x47,
+	0xb5, 0x65, 0xe3, 0x86, 0x45, 0x8f, 0xca, 0xac, 0x97, 0x7e, 0x53, 0x64, 0x0c, 0x55, 0x64, 0xac,
+	0x30, 0xbf, 0x99, 0x0d, 0xaf, 0x4e, 0xa4, 0x27, 0x02, 0x69, 0xee, 0xd6, 0x3e, 0x77, 0xaa, 0xd5,
+	0xf1, 0xbf, 0x45, 0x18, 0xc8, 0x09, 0xba, 0x22, 0xc9, 0x43, 0xe0, 0x11, 0xf4, 0x15, 0x50, 0xf3,
+	0x25, 0x44, 0xfb, 0x22, 0x54, 0xeb, 0x6b, 0x8c, 0x5f, 0x4c, 0xb0, 0x10, 0xf0, 0x6d, 0x58, 0xa9,
+	0x3d, 0x4f, 0x68, 0xb7, 0xf4, 0xd2, 0x3c, 0x8b, 0x78, 0xaf, 0xed, 0x58, 0x44, 0xbc, 0x82, 0x41,
+	0xfd, 0xa9, 0x40, 0x8a, 0x8f, 0xee, 0x99, 0xc2, 0xcf, 0x5b, 0xcf, 0x2b, 0x30, 0x55, 0xed, 0x56,
+	0x61, 0x6a, 0xde, 0x0c, 0x15, 0xa6, 0x56, 0xf2, 0xbf, 0x01, 0xaa, 0x09, 0x6e, 0x16, 0xb4, 0xa8,
+	0x58, 0xbb, 0x8e, 0x63, 0x6b, 0x92, 0x89, 0x08, 0xee, 0xc0, 0x8a, 0x2a, 0x9b, 0x6a, 0x09, 0x5a,
+	0x14, 0x58, 0x96, 0xa0, 0x55, 0x6e, 0xbf, 0xc0, 0xa0, 0x22, 0x7b, 0x59, 0x50, 0xc5, 0x49, 0xab,
+	0xa2, 0x78, 0xbf, 0xdd, 0xa0, 0x02, 0xb5, 0x52, 0x59, 0x05, 0xaa, 0x4e, 0x05, 0x55, 0xa8, 0x7a,
+	0xc1, 0xfb, 0x04, 0xab, 0x15, 0x01, 0xca, 0x0e, 0xd1, 0x76, 0x95, 0x60, 0x45, 0xc8, 0xf0, 0x8e,
+	0xfe, 0x50, 0xc4, 0xbb, 0x2b, 0xdf, 0x89, 0x42, 0x29, 0x24, 0xd8, 0x97, 0x35, 0x86, 0x5a, 0x2d,
+	0xc2, 0xaf, 0x3a, 0xac, 0x44, 0xa2, 0x6b, 0x58, 0xab, 0xde, 0xf5, 0x4b, 0xbf, 0x3e, 0x15, 0x7a,
+	0xf5, 0xa8, 0x4c, 0x45, 0x8b, 0x54, 0x9c, 0x1f, 0xc2, 0x5a, 0x10, 0x0d, 0xef, 0x92, 0xd8, 0x13,
+	0xc6, 0x5c, 0xdd, 0xcf, 0x9f, 0x14, 0x5c, 0xec, 0xec, 0xff, 0xda, 0x9e, 0xfb, 0x3b, 0x6f, 0x38,
+	0xf6, 0xc5, 0xed, 0x02, 0xff, 0xdd, 0x3e, 0xf9, 0x1f, 0x00, 0x00, 0xff, 0xff, 0x20, 0x2e, 0x4f,
+	0xaa, 0x9c, 0x0b, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -890,6 +1165,9 @@ type PhotosDBAServiceClient interface {
 	GetCityPhotoDBA(ctx context.Context, in *GetCityPhotosDBARequest, opts ...grpc.CallOption) (*GetCityPhotosDBAResponse, error)
 	GetPlacePhotoDBA(ctx context.Context, in *GetPlacePhotosDBARequest, opts ...grpc.CallOption) (*GetPlacePhotosDBAResponse, error)
 	GetPostPhotoDBA(ctx context.Context, in *GetPostPhotosDBARequest, opts ...grpc.CallOption) (*GetPostPhotosDBAResponse, error)
+	GetCitysPhotosDBA(ctx context.Context, in *GetCitysPhotoRequest, opts ...grpc.CallOption) (*GetCitysPhotoResponse, error)
+	GetPlacesPerCityPhotoDBA(ctx context.Context, in *GetPlacesPhotosPerCityRequest, opts ...grpc.CallOption) (*GetPlacesPhotosPerCityResponse, error)
+	GetPostsPhotosIdDBA(ctx context.Context, in *GetPostsPhotosPerIdRequest, opts ...grpc.CallOption) (*GetPostsPhotosPerIdResponse, error)
 }
 
 type photosDBAServiceClient struct {
@@ -972,6 +1250,33 @@ func (c *photosDBAServiceClient) GetPostPhotoDBA(ctx context.Context, in *GetPos
 	return out, nil
 }
 
+func (c *photosDBAServiceClient) GetCitysPhotosDBA(ctx context.Context, in *GetCitysPhotoRequest, opts ...grpc.CallOption) (*GetCitysPhotoResponse, error) {
+	out := new(GetCitysPhotoResponse)
+	err := c.cc.Invoke(ctx, "/wcity.PhotosDBAService/GetCitysPhotosDBA", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *photosDBAServiceClient) GetPlacesPerCityPhotoDBA(ctx context.Context, in *GetPlacesPhotosPerCityRequest, opts ...grpc.CallOption) (*GetPlacesPhotosPerCityResponse, error) {
+	out := new(GetPlacesPhotosPerCityResponse)
+	err := c.cc.Invoke(ctx, "/wcity.PhotosDBAService/GetPlacesPerCityPhotoDBA", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *photosDBAServiceClient) GetPostsPhotosIdDBA(ctx context.Context, in *GetPostsPhotosPerIdRequest, opts ...grpc.CallOption) (*GetPostsPhotosPerIdResponse, error) {
+	out := new(GetPostsPhotosPerIdResponse)
+	err := c.cc.Invoke(ctx, "/wcity.PhotosDBAService/GetPostsPhotosIdDBA", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // PhotosDBAServiceServer is the server API for PhotosDBAService service.
 type PhotosDBAServiceServer interface {
 	AddProfilePhotoDBA(context.Context, *AddProfilePhotoDBARequest) (*AddProfilePhotoDBAResponse, error)
@@ -982,6 +1287,9 @@ type PhotosDBAServiceServer interface {
 	GetCityPhotoDBA(context.Context, *GetCityPhotosDBARequest) (*GetCityPhotosDBAResponse, error)
 	GetPlacePhotoDBA(context.Context, *GetPlacePhotosDBARequest) (*GetPlacePhotosDBAResponse, error)
 	GetPostPhotoDBA(context.Context, *GetPostPhotosDBARequest) (*GetPostPhotosDBAResponse, error)
+	GetCitysPhotosDBA(context.Context, *GetCitysPhotoRequest) (*GetCitysPhotoResponse, error)
+	GetPlacesPerCityPhotoDBA(context.Context, *GetPlacesPhotosPerCityRequest) (*GetPlacesPhotosPerCityResponse, error)
+	GetPostsPhotosIdDBA(context.Context, *GetPostsPhotosPerIdRequest) (*GetPostsPhotosPerIdResponse, error)
 }
 
 // UnimplementedPhotosDBAServiceServer can be embedded to have forward compatible implementations.
@@ -1011,6 +1319,15 @@ func (*UnimplementedPhotosDBAServiceServer) GetPlacePhotoDBA(ctx context.Context
 }
 func (*UnimplementedPhotosDBAServiceServer) GetPostPhotoDBA(ctx context.Context, req *GetPostPhotosDBARequest) (*GetPostPhotosDBAResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPostPhotoDBA not implemented")
+}
+func (*UnimplementedPhotosDBAServiceServer) GetCitysPhotosDBA(ctx context.Context, req *GetCitysPhotoRequest) (*GetCitysPhotoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetCitysPhotosDBA not implemented")
+}
+func (*UnimplementedPhotosDBAServiceServer) GetPlacesPerCityPhotoDBA(ctx context.Context, req *GetPlacesPhotosPerCityRequest) (*GetPlacesPhotosPerCityResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPlacesPerCityPhotoDBA not implemented")
+}
+func (*UnimplementedPhotosDBAServiceServer) GetPostsPhotosIdDBA(ctx context.Context, req *GetPostsPhotosPerIdRequest) (*GetPostsPhotosPerIdResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPostsPhotosIdDBA not implemented")
 }
 
 func RegisterPhotosDBAServiceServer(s *grpc.Server, srv PhotosDBAServiceServer) {
@@ -1161,6 +1478,60 @@ func _PhotosDBAService_GetPostPhotoDBA_Handler(srv interface{}, ctx context.Cont
 	return interceptor(ctx, in, info, handler)
 }
 
+func _PhotosDBAService_GetCitysPhotosDBA_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetCitysPhotoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(PhotosDBAServiceServer).GetCitysPhotosDBA(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/wcity.PhotosDBAService/GetCitysPhotosDBA",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(PhotosDBAServiceServer).GetCitysPhotosDBA(ctx, req.(*GetCitysPhotoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _PhotosDBAService_GetPlacesPerCityPhotoDBA_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetPlacesPhotosPerCityRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(PhotosDBAServiceServer).GetPlacesPerCityPhotoDBA(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/wcity.PhotosDBAService/GetPlacesPerCityPhotoDBA",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(PhotosDBAServiceServer).GetPlacesPerCityPhotoDBA(ctx, req.(*GetPlacesPhotosPerCityRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _PhotosDBAService_GetPostsPhotosIdDBA_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetPostsPhotosPerIdRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(PhotosDBAServiceServer).GetPostsPhotosIdDBA(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/wcity.PhotosDBAService/GetPostsPhotosIdDBA",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(PhotosDBAServiceServer).GetPostsPhotosIdDBA(ctx, req.(*GetPostsPhotosPerIdRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _PhotosDBAService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "wcity.PhotosDBAService",
 	HandlerType: (*PhotosDBAServiceServer)(nil),
@@ -1196,6 +1567,18 @@ var _PhotosDBAService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetPostPhotoDBA",
 			Handler:    _PhotosDBAService_GetPostPhotoDBA_Handler,
+		},
+		{
+			MethodName: "GetCitysPhotosDBA",
+			Handler:    _PhotosDBAService_GetCitysPhotosDBA_Handler,
+		},
+		{
+			MethodName: "GetPlacesPerCityPhotoDBA",
+			Handler:    _PhotosDBAService_GetPlacesPerCityPhotoDBA_Handler,
+		},
+		{
+			MethodName: "GetPostsPhotosIdDBA",
+			Handler:    _PhotosDBAService_GetPostsPhotosIdDBA_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
